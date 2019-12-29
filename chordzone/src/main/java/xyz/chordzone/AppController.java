@@ -1,7 +1,5 @@
 package xyz.chordzone;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,27 +9,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
+
 @Controller
 public class AppController {
 	@Autowired
-	private ProductService service;
+	private SongService service;
 	
 	@RequestMapping("/")
 	public String viewHomePage(Model model) {
-		List<Product> listProducts = service.listAll();
+		List<Song> listProducts = service.listAll();
 		model.addAttribute("listProducts", listProducts);
 		return "index";
 	}
 	@RequestMapping("/new_product")
 	public String showNewProductForm(Model model) {
-		Product product = new Product();
-		model.addAttribute("product", product);
+		Song song = new Song();
+		model.addAttribute("product", song);
 		return "new_product";
 	}
 	
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
-	public String saveProduct(@ModelAttribute("product") Product product) {
-		service.save(product);
+	public String saveProduct(@ModelAttribute("product") Song song) {
+		service.save(song);
 		return "redirect:/";
 	}
 	
@@ -39,8 +39,8 @@ public class AppController {
 	public ModelAndView showEditProductForm(@PathVariable(name = "id") Long id) {
 		ModelAndView mav = new ModelAndView("edit_product");
 		
-		Product product = service.get(id);
-		mav.addObject("product", product);
+		Song song = service.get(id);
+		mav.addObject("product", song);
 		return mav;
 	}
 	@RequestMapping("/delete/{id}")

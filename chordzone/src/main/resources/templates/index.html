@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org" lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Hợp Âm Việt</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Thư viện hợp âm cực chuẩn dành cho guitar, sheet nhạc, chuyển đổi tone, hợp âm bài hát, xác định tone ca sĩ hát, nghe nhạc trực tuyến">
+<meta name="keywords" content="hợp âm, hợp âm guitar, thư viện hợp âm, hợp âm chuẩn, đổi tông, hợp âm bài hát, hop am viet, nhạc có nốt, nhạc tờ, sheet, sheet nhạc, thông tin nhạc sĩ, chuyển đổi tông, chuyển đổi tone">
+<meta property="fb:pages" content="283358615146535" />
+<meta name="msvalidate.01" content="A4F771C443186B3AF5E98657276995A5" />
+<meta name="google-site-verification" content="BbYXdvNF4HGGBJqlGAWP7qLWZ4CVqIRczLv8FBZBvJo" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link href="assets/css/bootstrap-editable.css" rel="stylesheet">
+<link href="assets/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+<link href="assets/css/custom.css" rel="stylesheet">
+<link href="assets/jplayer/skin/blue.monday/css/jplayer.blue.monday.css" rel="stylesheet">
+<link rel="canonical" href="https://hopamviet.vn/">
+<!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
+  <![endif]-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="assets/js/bootstrap-typeahead.min.js"></script>
+<script src="assets/js/bootstrap-editable.min.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-78385107-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-78385107-1');
+</script>
+<script src="assets/js/custom.js"></script>
+</head>
+<body>
+<style>
+	div.dropdown-multicol{
+	  width: 35em;
+	}
+	div.dropdown-row>a.dropdown-item{
+	  display:inline-block;
+	  width: 32%;
+	}
+	.navbar-nav li:hover .dropdown-menu {
+    	display: block;
+	}
+</style>
+<nav class="navbar navbar-expand-xl navbar-light bg-light sticky-top">
+<div class="container">
+<a href="https://hopamviet.vn/" class="navbar-brand"><h3>Hợp Âm Việt</h3></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="navbar-collapse collapse" id="main_nav">
+<ul class="navbar-nav mr-auto pr-4">
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="MenuTheLoai" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<i class="fas fa-book fa-lg"></i> Thể loại
+</a>
+<div class="dropdown-menu dropdown-multicol m-0" aria-labelledby="MenuTheLoai">
+<div class="dropdown-row">
+<a class="dropdown-item" href="https://hopamviet.vn/chord/category/1/nhac-vang.html"><i class="fas fa-book"></i>&nbsp; Nhạc Vàng</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/category/2/nhac-tru-tinh.html"><i class="fas fa-book"></i>&nbsp; Nhạc Trữ tình</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/category/3/nhac-tre.html"><i class="fas fa-book"></i>&nbsp; Nhạc Trẻ</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/category/4/nhac-que-huong.html"><i class="fas fa-book"></i>&nbsp; Nhạc Quê hương</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/category/5/nhac-ngoai-loi-viet.html"><i class="fas fa-book"></i>&nbsp; Nhạc Ngoại lời Việt</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/category/6/nhac-do.html"><i class="fas fa-book"></i>&nbsp; Nhạc Đỏ</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/category/7/nhac-dan-ca.html"><i class="fas fa-book"></i>&nbsp; Nhạc Dân ca</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/category/8/nhac-quoc-te.html"><i class="fas fa-book"></i>&nbsp; Nhạc Quốc tế</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/category/9/nhac-hoc-tro.html"><i class="fas fa-book"></i>&nbsp; Nhạc Học trò</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/category/10/nhac-thieu-nhi.html"><i class="fas fa-book"></i>&nbsp; Nhạc Thiếu nhi</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/category/11/nhac-thanh-ca.html"><i class="fas fa-book"></i>&nbsp; Nhạc Thánh ca</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/category/12/nhac-phat-giao.html"><i class="fas fa-book"></i>&nbsp; Nhạc Phật giáo</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/category/13/nhac-che-vui.html"><i class="fas fa-book"></i>&nbsp; Nhạc Chế - Vui</a>
+</div>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="MenuDieu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<i class="fas fa-guitar fa-lg"></i> Điệu
+</a>
+<div class="dropdown-menu dropdown-multicol m-0" aria-labelledby="MenuDieu">
+<div class="dropdown-row">
+<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/6/ballade.html"><i class="fas fa-guitar"></i>&nbsp; Ballade</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/5/blues.html"><i class="fas fa-guitar"></i>&nbsp; Blues</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/1/bolero.html"><i class="fas fa-guitar"></i>&nbsp; Boléro</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/15/bossa-nova.html"><i class="fas fa-guitar"></i>&nbsp; Bossa Nova</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/11/boston.html"><i class="fas fa-guitar"></i>&nbsp; Boston</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/7/chachacha.html"><i class="fas fa-guitar"></i>&nbsp; Chachacha</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/8/disco.html"><i class="fas fa-guitar"></i>&nbsp; Disco</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/12/fox.html"><i class="fas fa-guitar"></i>&nbsp; Fox</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/17/habanera.html"><i class="fas fa-guitar"></i>&nbsp; Habanera</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/19/march.html"><i class="fas fa-guitar"></i>&nbsp; March</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/20/pasodope.html"><i class="fas fa-guitar"></i>&nbsp; Pasodope</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/16/pop.html"><i class="fas fa-guitar"></i>&nbsp; Pop</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/22/rap.html"><i class="fas fa-guitar"></i>&nbsp; Rap</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/9/rhumba.html"><i class="fas fa-guitar"></i>&nbsp; Rhumba</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/13/rock.html"><i class="fas fa-guitar"></i>&nbsp; Rock</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/2/slow.html"><i class="fas fa-guitar"></i>&nbsp; Slow</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/21/slow-ballad.html"><i class="fas fa-guitar"></i>&nbsp; Slow Ballad</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/3/slow-rock.html"><i class="fas fa-guitar"></i>&nbsp; Slow Rock</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/4/slow-surf.html"><i class="fas fa-guitar"></i>&nbsp; Slow Surf</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/10/tango.html"><i class="fas fa-guitar"></i>&nbsp; Tango</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/18/twist.html"><i class="fas fa-guitar"></i>&nbsp; Twist</a>
+<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/14/valse.html"><i class="fas fa-guitar"></i>&nbsp; Valse</a>
+</div>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="MenuUser" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<i class="fas fa-user fa-lg"></i>
+</a>
+<div class="dropdown-menu m-0" aria-labelledby="MenuUser">
+<a class="dropdown-item" href="https://hopamviet.vn/auth/login.html" rel="nofollow">Đăng nhập</a>
+<a class="dropdown-item" href="https://hopamviet.vn/auth/register.html" rel="nofollow">Đăng ký</a>
+</div>
+</li>
+</ul>
+</div>
+<form class="d-inline my-auto float-left w-100" method="get" action="https://hopamviet.vn/chord/search.html">
+<div class="input-group m-0">
+<input type="search" class="form-control" placeholder="Nhập tên bài hát, tên ca sĩ / @tên nhạc sĩ / lời" value="" name="song">
+<span class="input-group-append">
+<button class="btn btn-primary border border-left-0" type="submit">
+<i class="fas fa-search"></i> Tìm
+</button>
+</span>
+</div>
+</form>
+</div>
+</nav>
+<div class="container pt-3">
+<div class="row">
+<div class="col-lg-8">
+<div class="ct-box">
+<div style="margin-top: -10px; margin-left: -10px;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-2439726574577759" data-ad-slot="3091825225"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div class="ct-heading"><a href="https://hopamviet.vn/chord/latest.html"> BÀI HÁT MỚI ĐĂNG</a> <a href="https://hopamviet.vn/chord/latest/10.html" class="float-right"><em>Xem thêm <i class="fas fa-arrow-right"></i></em> </a></div>
+<div class="row  p-right">
+<div class="col-12">
+<h5>
+<i class="fas fa-guitar fa-fw"></i>
+<a href="https://hopamviet.vn/chord/song/thuy-khuc/W8IU67WC.html">
+Thụy khúc
+</a>
+<small> &nbsp;<i class="fas fa-user"></i> Sáng tác:
+<a href="https://hopamviet.vn/chord/composer/494/vu-thanh.html">Vũ Thanh</a> & <a href="https://hopamviet.vn/chord/composer/5212/kim-tuoc.html">Kim Tước</a>
+</small>
+</h5>
+<em>
+Ngồi đây [Em] với nỗi nhớ đong đầy
+Tình yêu đã [D] mang ta đi nơi nào
+[C] Nghe con tim nhói đau biết ta đã [Bm] xa xa thật [B7] xa
+[Am] Vì tình mình ngang trai hay [Em]&#8230; </em>
+<br />
+<small><span class="text-muted">Ca sĩ thể hiện: </span><em><a href="https://hopamviet.vn/chord/singer/Thanh Ngọc" class="csinger">Thanh Ngọc</a></em></small> <a href="https://hopamviet.vn/chord/category/3/nhac-tre.html"><span class="float-right text-muted small">Nhạc Trẻ</span></a>
+<div class="clearfix"></div>
+
+<div style="background:#eee; border:0; height: 1px; margin: 10px 0;"> </div>
+</div>
+
+<div class="col-12" th:each="song : ${listProducts}">
+    <h5>
+        <i class="fas fa-guitar fa-fw"></i>
+        <a href="https://hopamviet.vn/chord/song/chuc-mung-giang-sinh/W8IU67WB.html" th:text=${song.title}>
+            Chúc mừng Giáng sinh
+        </a>
+        <small> &nbsp;<i class="fas fa-user"></i> Sáng tác:
+            <a href="https://hopamviet.vn/chord/composer/5059/tran-minh-trung.html" th:text=${song.artist}>Trần Minh Trung</a>
+            <a href="https://hopamviet.vn/sheet/song/chuc-mung-giang-sinh/W8IU67WB.html" data-toggle="tooltip" data-placement="top" title="Sheet ca khúc Chúc mừng Giáng sinh">&nbsp;<i class="fas fa-file-alt" style="color:#5CB85C"></i></a>
+        </small>
+    </h5>
+
+<!--    <td th:text=${song.id}>Product ID</td>-->
+<!--    <td th:text=${song.title}>Name</td>-->
+<!--    <td th:text=${song.artist}>Brand</td>-->
+<!--    <td th:text=${song.lyric}>Made In</td>-->
+<!--    <td th:text=${song.visitcount}>Price</td>-->
+<!--    <td>-->
+<!--        <a th:href="@{'/edit/' + ${song.id}}">Edit</a>-->
+<!--        &nbsp;&nbsp;&nbsp;&nbsp;-->
+<!--        <a th:href="@{'/delete/' + ${song.id}}">Delete</a>-->
+<!--    </td>-->
+</div>
+
+<div class="col-12">
+<h5>
+<i class="fas fa-guitar fa-fw"></i>
+<a href="https://hopamviet.vn/chord/song/chuc-mung-giang-sinh/W8IU67WB.html">
+Chúc mừng Giáng sinh
+</a>
+<small> &nbsp;<i class="fas fa-user"></i> Sáng tác:
+<a href="https://hopamviet.vn/chord/composer/5059/tran-minh-trung.html">Trần Minh Trung</a>
+<a href="https://hopamviet.vn/sheet/song/chuc-mung-giang-sinh/W8IU67WB.html" data-toggle="tooltip" data-placement="top" title="Sheet ca khúc Chúc mừng Giáng sinh">&nbsp;<i class="fas fa-file-alt" style="color:#5CB85C"></i></a>
+</small>
+</h5>
+<em>
+Mùa đông đã [Bm] đến giáng [C] sinh đang đón chờ [Em] ta [G7]
+Để đông ấm [C] áp trái [Em/C#] tim ta mở rộng [D7] ra [G7]
+Mừng chúa giáng [C7] sinh năm nay [F] gạt hết nỗi [B7]&#8230; </em>
+<br />
+<small><span class="text-muted">Ca sĩ thể hiện: </span><em><a href="https://hopamviet.vn/chord/singer/Ngủ Cầm Band" class="csinger">Ngủ Cầm Band</a></em></small> <a href="https://hopamviet.vn/chord/category/11/nhac-thanh-ca.html"><span class="float-right text-muted small">Nhạc Thánh ca</span></a>
+<div class="clearfix"></div>
+<div style="background:#eee; border:0; height: 1px; margin: 10px 0;"> </div>
+</div>
+<div class="col-12">
+<h5>
+<i class="fas fa-guitar fa-fw"></i>
+<a href="https://hopamviet.vn/chord/song/lien-khuc-sao-khong-thay-anh-ve-nhung-doi-hoa-sim/W8IU67WA.html">
+Liên khúc Sao không thấy anh về & Những đồi hoa sim
+</a>
+<small> &nbsp;<i class="fas fa-user"></i> Sáng tác:
+<a href="https://hopamviet.vn/chord/composer/50/duy-khanh.html">Duy Khánh</a> & <a href="https://hopamviet.vn/chord/composer/26/dzung-chinh.html">Dzũng Chinh</a>
+</small>
+</h5>
+<em>
+1. Anh nói rằng anh sẽ về [Am] thăm quê miền trung
+Dù năm tháng [G] dài đường xa lạnh [Am] lùng
+Dòng [G] sông hương còn trôi, vầng [F] trăng xưa còn soi
+Sao [G] không thấy anh [E7]&#8230; </em>
+<br />
+<small><span class="text-muted">Ca sĩ thể hiện: </span><em><a href="https://hopamviet.vn/chord/singer/Quỳnh Trang & Thiên Quang" class="csinger">Quỳnh Trang & Thiên Quang</a></em></small> <a href="https://hopamviet.vn/chord/category/1/nhac-vang.html"><span class="float-right text-muted small">Nhạc Vàng</span></a>
+<div class="clearfix"></div>
+<div style="background:#eee; border:0; height: 1px; margin: 10px 0;"> </div>
+</div>
+<div class="col-12">
+<h5>
+<i class="fas fa-guitar fa-fw"></i>
+<a href="https://hopamviet.vn/chord/song/doi-anh-den-cuoi-em-dng-n-q-w/W8IU67W9.html">
+Đợi anh đến cưới em (Děng nǐ qǔ wǒ - 等你娶我)
+</a>
+<small> &nbsp;<i class="fas fa-user"></i> Sáng tác:
+<a href="https://hopamviet.vn/chord/composer/88/nhac-hoa.html">Nhạc Hoa</a>
+</small>
+</h5>
+<em>
+Intro: [C][Am]-[Dm][G]-[Em][Am]-[Dm][G][C]
+1. 为何不说你爱我
+[C] Wèi hé bù shuō nǐ ài [Em] wǒ
+难道还在考验我
+[F] Nán dào hái zài kǎo yàn [C] wǒ
+你还真的猜对了
+[F] Nǐ hái zhēn de cāi duì [Dm] le
+爱情不是随便的
+Ai qíng [G] bù shì suí&#8230; </em>
+<br />
+<small><span class="text-muted">Ca sĩ thể hiện: </span><em><a href="https://hopamviet.vn/chord/singer/Anh Shizhe & Zhang Xiaoming" class="csinger">Anh Shizhe & Zhang Xiaoming</a></em></small> <a href="https://hopamviet.vn/chord/category/8/nhac-quoc-te.html"><span class="float-right text-muted small">Nhạc Quốc tế</span></a>
+<div class="clearfix"></div>
+<div style="background:#eee; border:0; height: 1px; margin: 10px 0;"> </div>
+</div>
+<div class="col-12">
+<h5>
+<i class="fas fa-guitar fa-fw"></i>
+ <a href="https://hopamviet.vn/chord/song/nhat-dinh-phai-yeu-anh-y-ding-yao-ai-n/W8IU67W8.html">
+Nhất định phải yêu anh (Yī dìng yào ài nǐ - 一定要爱你)
+</a>
+<small> &nbsp;<i class="fas fa-user"></i> Sáng tác:
+<a href="https://hopamviet.vn/chord/composer/88/nhac-hoa.html">Nhạc Hoa</a>
+</small>
+</h5>
+<em>
+Intro: [G][Em]-[C][D7]-[Em][A]-[D7][G]
+1. 雖然我們相識的日子 還是短暫的
+Suī rán [G] wǒ men xiāng shí de rì zi [Bm] hái shì duǎn zàn de
+可是我已深深把你來愛了
+kě shì [Em] wǒ yǐ shēn shēn bǎ nǐ lái ài [Bm] le
+你的天真和你的純情 已把我吸引了
+nǐ de [C]&#8230; </em>
+<br />
+<small><span class="text-muted">Ca sĩ thể hiện: </span><em><a href="https://hopamviet.vn/chord/singer/Ngô Tử Hàm" class="csinger">Ngô Tử Hàm</a></em></small> <a href="https://hopamviet.vn/chord/category/8/nhac-quoc-te.html"><span class="float-right text-muted small">Nhạc Quốc tế</span></a>
+<div class="clearfix"></div>
+<div style="background:#eee; border:0; height: 1px; margin: 10px 0;"> </div>
+</div>
+<div class="col-12">
+<h5>
+<i class="fas fa-guitar fa-fw"></i>
+<a href="https://hopamviet.vn/chord/song/em-la-hanh-phuc-cua-anh-n-shi-w-di-xing-fu/W8IU67W7.html">
+Em là hạnh phúc của anh (Nǐ shì wǒ dí xìng fú - 你是我的幸福)
+</a>
+<small> &nbsp;<i class="fas fa-user"></i> Sáng tác:
+<a href="https://hopamviet.vn/chord/composer/88/nhac-hoa.html">Nhạc Hoa</a>
+</small>
+</h5>
+<em>
+Intro: [C][Am]-[F][G]-[Em][Am]-[Dm][G][C]
+1. yuè guāng [C] rú xǐ zhào liàng le [Am] hēi yè
+月 光 如 洗 照 亮 了 黑 夜
+wǒ de [F] sī niàn rú mó zài jiū [G] jié
+我 的 思 念 如 魔&#8230; </em>
+<br />
+<small><span class="text-muted">Ca sĩ thể hiện: </span><em><a href="https://hopamviet.vn/chord/singer/Takayasu" class="csinger">Takayasu</a></em></small> <a href="https://hopamviet.vn/chord/category/8/nhac-quoc-te.html"><span class="float-right text-muted small">Nhạc Quốc tế</span></a>
+<div class="clearfix"></div>
+<div style="background:#eee; border:0; height: 1px; margin: 10px 0;"> </div>
+</div>
+<div class="col-12">
+<h5>
+<i class="fas fa-guitar fa-fw"></i>
+<a href="https://hopamviet.vn/chord/song/kiep-nay-gap-lai-chang-jn-shng-yu-jian-n/W8IU67W6.html">
+Kiếp này gặp lại chàng (Jīn shēng yù jiàn nǐ - 今生遇见你)
+</a>
+<small> &nbsp;<i class="fas fa-user"></i> Sáng tác:
+<a href="https://hopamviet.vn/chord/composer/88/nhac-hoa.html">Nhạc Hoa</a>
+</small>
+</h5>
+<em>
+Intro: [D][Bm]-[Em][A]-[D][Bm]-[Em][A][D]
+1. 红尘遇见你 让我爱上你
+[D] Hóngchén yùjiàn nǐ [Bm] ràng wǒ ài shàng nǐ
+深深把你放在我心底
+[Em] Shēn shēn bǎ nǐ fàng zài [A] wǒ xīndǐ
+前世的约定 今生的相遇
+[D] Qiánshì de yuēdìng [Bm] jīnshēng de xiāngyù
+今生的缘今生再继续
+[Em] Jīnshēng de&#8230; </em>
+<br />
+<small><span class="text-muted">Ca sĩ thể hiện: </span><em><a href="https://hopamviet.vn/chord/singer/Kỳ Long & Nhậm Diệu Âm" class="csinger">Kỳ Long & Nhậm Diệu Âm</a></em></small> <a href="https://hopamviet.vn/chord/category/8/nhac-quoc-te.html"><span class="float-right text-muted small">Nhạc Quốc tế</span></a>
+<div class="clearfix"></div>
+<div style="background:#eee; border:0; height: 1px; margin: 10px 0;"> </div>
+</div>
+<div class="col-12">
+<h5>
+<i class="fas fa-guitar fa-fw"></i>
+<a href="https://hopamviet.vn/chord/song/hong-tran-huu-duyen-hong-chen-yu-yuan/W8IU67WZ.html">
+Hồng trần hữu duyên (Hóng chén yǒu yuán - 紅塵有緣)
+</a>
+<small> &nbsp;<i class="fas fa-user"></i> Sáng tác:
+<a href="https://hopamviet.vn/chord/composer/88/nhac-hoa.html">Nhạc Hoa</a>
+</small>
+</h5>
+<em>
+Intro: [D][F#m]-[Bm][Em]-[F#m][Em][Bm]-[Em][A][D]
+1. 春花残了还会艳
+chūn huā [D] cán liǎo huán huì [F#m] yàn
+秋月缺了还会圆
+qiū yuè [Bm] quē liǎo huán huì [Em] yuán
+天上人间看一遍
+tiān shàng [F#m] rén jiān kàn yī [Bm] biàn
+有情的人总会把手牵
+yǒu qíng [Em] dí rén zǒng&#8230; </em>
+<br />
+<small><span class="text-muted">Ca sĩ thể hiện: </span><em><a href="https://hopamviet.vn/chord/singer/An Đông Dương & Mộ Dung Hiểu" class="csinger">An Đông Dương & Mộ Dung Hiểu</a></em></small> <a href="https://hopamviet.vn/chord/category/8/nhac-quoc-te.html"><span class="float-right text-muted small">Nhạc Quốc tế</span></a>
+<div class="clearfix"></div>
+<div style="background:#eee; border:0; height: 1px; margin: 10px 0;"> </div>
+</div>
+<div class="col-12">
+<h5>
+<i class="fas fa-guitar fa-fw"></i>
+<a href="https://hopamviet.vn/chord/song/ai-se-thay-em-yeu-lai-anh/W8IU67WU.html">
+Ai sẽ thay em yêu lại anh
+</a>
+<small> &nbsp;<i class="fas fa-user"></i> Sáng tác:
+<a href="https://hopamviet.vn/chord/composer/2679/mai-fin.html">Mai Fin</a>
+</small>
+</h5>
+<em>
+[Am] Em đã tổn [E] thương [G] khi người quay [Am] bước
+[F] Đôi tay run [G] run ôm con [C] tim đầy vết [E] xước
+[Am] Ta lạc mất [E] nhau, [C] nếu có ngày [G] sau
+[F] Ai&#8230; </em>
+<br />
+<small><span class="text-muted">Ca sĩ thể hiện: </span><em><a href="https://hopamviet.vn/chord/singer/Thái Trinh" class="csinger">Thái Trinh</a></em></small> <a href="https://hopamviet.vn/chord/category/3/nhac-tre.html"><span class="float-right text-muted small">Nhạc Trẻ</span></a>
+<div class="clearfix"></div>
+<div style="background:#eee; border:0; height: 1px; margin: 10px 0;"> </div>
+</div>
+<div class="col-12">
+<h5>
+<i class="fas fa-guitar fa-fw"></i>
+<a href="https://hopamviet.vn/chord/song/tuoi-muoi-lam/W8IU67WO.html">
+Tuổi mười lăm (Tuổi 15)
+</a>
+<small> &nbsp;<i class="fas fa-user"></i> Sáng tác:
+<a href="https://hopamviet.vn/chord/composer/377/truong-quang-luc.html">Trương Quang Lục</a>
+</small>
+</h5>
+<em>
+1. Em bước [D] vào tuổi mười [Em] lăm
+Bao mới [F#m] lạ đến [A7] dần theo tháng [D] năm
+Bao ước [G] vọng và mộng [Em] mơ
+Nhẹ nhàng [G] như vần [A7] điệu những dòng [D] thơ
+Dịu&#8230; </em>
+<br />
+<small><span class="text-muted">Ca sĩ thể hiện: </span><em><a href="https://hopamviet.vn/chord/singer/V.A" class="csinger">V.A</a>, <a href="https://hopamviet.vn/chord/singer/Tam ca thiếu nhi Tân Bình" class="csinger">Tam ca thiếu nhi Tân Bình</a></em></small> <a href="https://hopamviet.vn/chord/category/10/nhac-thieu-nhi.html"><span class="float-right text-muted small">Nhạc Thiếu nhi</span></a>
+<div class="clearfix"></div>
+</div>
+<div class="mx-auto pt-2">
+<a href="https://hopamviet.vn/chord/latest/10.html" class="btn btn-outline-primary btn-sm">Xem thêm</a>
+</div>
+</div>
+</div>
+<div class="ct-box">
+<div class="ct-heading"><a href="https://hopamviet.vn/info/list_related.html">TƯ LIỆU</a> <a href="https://hopamviet.vn/info/list_related.html" class="float-right"><em>Xem thêm <i class="fa fa-arrow-right"></i></em> </a></div>
+<div class="row p-right">
+<div class="col-lg-6 col-sm-12" style="padding-bottom: 18px">
+<a href="https://hopamviet.vn/info/related/371/trinh-cong-son-va-thanh-pho-quy-nhon.html" title="Trịnh Công Sơn và thành phố Quy Nhơn">
+<div><img src="https://hopamviet.vn/assets/images/editor/thumb/trinh-cong-son_pvah_thumb.jpg" width="120" height="80" class="float-left mr-3" alt="Trịnh Công Sơn và thành phố Quy Nhơn"></div>
+<div>Trịnh Công Sơn và thành phố Quy Nhơn</div>
+</a>
+</div>
+<div class="col-lg-6 col-sm-12" style="padding-bottom: 18px">
+<a href="https://hopamviet.vn/info/related/370/tu-hoa-su-nha-nang-den-nhac-go-cong.html" title="Từ Hoa sứ nhà nàng đến nhạc Gò Công">
+<div><img src="https://hopamviet.vn/assets/images/editor/thumb/hoang-phuong_thumb.jpg" width="120" height="80" class="float-left mr-3" alt="Từ Hoa sứ nhà nàng đến nhạc Gò Công"></div>
+<div>Từ Hoa sứ nhà nàng đến nhạc Gò Công</div>
+</a>
+</div>
+</div>
+<div class="row p-right">
+<div class="col-lg-6 col-sm-12" style="padding-bottom: 18px">
+<a href="https://hopamviet.vn/info/related/369/vo-co-nhac-si-truong-quoc-khanh-hau-het-hat-sai-loi-tu-nguyen.html" title="Vợ cố nhạc sĩ Trương Quốc Khánh: Hầu hết hát sai lời Tự nguyện">
+<div><img src="https://hopamviet.vn/assets/images/editor/thumb/tu-nguyen_thumb.jpg" width="120" height="80" class="float-left mr-3" alt="Vợ cố nhạc sĩ Trương Quốc Khánh: Hầu hết hát sai lời Tự nguyện"></div>
+<div>Vợ cố nhạc sĩ Trương Quốc Khánh: Hầu hết hát sai lời Tự nguyện</div>
+</a>
+</div>
+<div class="col-lg-6 col-sm-12" style="padding-bottom: 18px">
+<a href="https://hopamviet.vn/info/related/368/ca-khuc-hen-ho-cua-nhac-si-pham-duy-cau-chuyen-tinh-buon-giua-mot-mua-ngau.html" title="Ca khúc 'Hẹn hò' của nhạc sĩ Phạm Duy – Câu chuyện tình buồn giữa một mùa Ngâu">
+<div><img src="https://hopamviet.vn/assets/images/editor/thumb/hen-ho_thumb.jpg" width="120" height="80" class="float-left mr-3" alt="Ca khúc 'Hẹn hò' của nhạc sĩ Phạm Duy – Câu chuyện tình buồn giữa một mùa Ngâu"></div>
+<div>Ca khúc 'Hẹn hò' của nhạc sĩ Phạm Duy – Câu chuyện tình buồn giữa một mùa Ngâu</div>
+</a>
+</div>
+</div>
+</div><div class="ct-box">
+<div class="ct-heading"><a href="https://hopamviet.vn/info/comments.html"> BÌNH LUẬN MỚI</a> <a href="https://hopamviet.vn/info/comments.html" class="float-right"><em>Xem thêm <i class="fa fa-arrow-right"></i></em> </a></div>
+<div class="row">
+<div class="col-md-6 col-xs-12">
+<div style="padding: 5px;">
+<a href="https://hopamviet.vn/chord/song/da-lat-lap-dong/W8IUIUZB.html">Đà Lạt lập đông</a>
+</div>
+<small><em><strong>kynguyen65: </strong>@ngucamband: cám ơn bạn, từ nay các thành viên có thêm một lựa chon.</em> <br /><span class="text-muted"> <i class="fa fa-clock-o"></i> 1 giờ trước</span></small>
+</div>
+<div class="col-md-6 col-xs-12">
+<div style="padding: 5px;">
+<a href="https://hopamviet.vn/chord/song/bong-hong-cai-ao/W8IU0FFB.html">Bông hồng cài áo</a>
+</div>
+<small><em><strong>Vũ Khắc Điệp: </strong>Cho thêm giọng ca của ca sĩ Tuấn Anh vào luôn đi ad.</em> <br /><span class="text-muted"> <i class="fa fa-clock-o"></i> 5 giờ trước</span></small>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6 col-xs-12">
+<div style="padding: 5px;">
+<a href="https://hopamviet.vn/chord/song/da-lat-lap-dong/W8IUIUZB.html">Đà Lạt lập đông</a>
+</div>
+<small><em><strong>ngucamband: </strong>Hi Ad! Mình nghe phiên bản của Quang Dũng hát, có đề nghị chỉnh lại một vài hợp âm như sau:…</em> <br /><span class="text-muted"> <i class="fa fa-clock-o"></i> 13 giờ trước</span></small>
+</div>
+<div class="col-md-6 col-xs-12">
+<div style="padding: 5px;">
+<a href="https://hopamviet.vn/chord/song/nho-ve-mot-mua-xuan/W8IUIA97.html">Nhớ về một mùa xuân</a>
+</div>
+<small><em><strong>kynguyen65: </strong>@khoa: hiện tại sheet bài này chưa có nhé bạn</em> <br /><span class="text-muted"> <i class="fa fa-clock-o"></i> 16 giờ trước</span></small>
+</div>
+</div>
+<div class="row">
+
+<div class="col-md-6 col-xs-12">
+<div style="padding: 5px;">
+<a href="https://hopamviet.vn/chord/song/het-thuong-can-nho/W8IU6UZ9.html">Hết thương cạn nhớ</a>
+</div>
+<small><em><strong>kynguyen65: </strong>@sakuzi: Huy vạc giọng Bbm nhé</em> <br /><span class="text-muted"> <i class="fa fa-clock-o"></i> 18 giờ trước</span></small>
+</div>
+<div class="col-md-6 col-xs-12">
+<div style="padding: 5px;">
+<a href="https://hopamviet.vn/chord/song/coi-nho/W8IUIIDO.html">Cõi nhớ</a>
+</div>
+<small><em><strong>kynguyen65: </strong>Phương Anh - tone Bm nhé @Khá
+Còn về hợp âm bài hát thì cơ bản cũng như trên</em> <br /><span class="text-muted"> <i class="fa fa-clock-o"></i> 18 giờ trước</span></small>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6 col-xs-12">
+<div style="padding: 5px;">
+<a href="https://hopamviet.vn/chord/song/coi-nho/W8IUIIDO.html">Cõi nhớ</a>
+</div>
+<small><em><strong>Khá: </strong>Ad nào có hợp âm ca sỹ phương anh không</em> <br /><span class="text-muted"> <i class="fa fa-clock-o"></i> 18 giờ trước</span></small>
+</div>
+<div class="col-md-6 col-xs-12">
+<div style="padding: 5px;">
+<a href="https://hopamviet.vn/chord/song/het-thuong-can-nho/W8IU6UZ9.html">Hết thương cạn nhớ</a>
+</div>
+<small><em><strong>sakuzi: </strong>admin add thêm giọng huy vạc giúp mình nhé…</em> <br /><span class="text-muted"> <i class="fa fa-clock-o"></i> 19 giờ trước</span></small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4">
+<div class="row">
+<div class="col-md-12">
+<div class="ct-box">
+<div style="margin-left: -10px; margin-top: -10px">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-2439726574577759" data-ad-slot="6494446823"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+<div class="ct-box">
+<h5><strong>Hợp âm xem nhiều trong tháng</strong></h5>
+<p><span class="text-muted">01. </span> <a href="https://hopamviet.vn/chord/song/hanh-lang-cu-ha-nho/W8IU66W7.html"> Hành lang cũ (Hạ nhớ) - Long Nón Lá</a></p>
+<p><span class="text-muted">02. </span> <a href="https://hopamviet.vn/chord/song/viet-nam-toi/W8IU66ZU.html"> Việt Nam tôi - Jack & K-ICM & Trung Lương & Chấn Quốc</a></p>
+<p><span class="text-muted">03. </span> <a href="https://hopamviet.vn/chord/song/la-xa-lia-canh/W8IU66EZ.html"> Lá xa lìa cành - Lê Bảo Bình</a></p>
+<p><span class="text-muted">04. </span> <a href="https://hopamviet.vn/chord/song/thuan-theo-y-troi/W8IU66UO.html"> Thuận theo ý trời - Bùi Anh Tuấn</a></p>
+<p><span class="text-muted">05. </span> <a href="https://hopamviet.vn/chord/song/tu-do-mat-biec-ost/W8IU67II.html"> Từ đó (Mắt biếc OST) - Phan Mạnh Quỳnh</a></p>
+<p><span class="text-muted">06. </span> <a href="https://hopamviet.vn/chord/song/co-nhu-khong-co/W8IU6ZFE.html"> Có như không có - Hiền Hồ</a></p>
+<p><span class="text-muted">07. </span> <a href="https://hopamviet.vn/chord/song/banh-mi-khong/W8IU66D0.html"> Bánh mì không - Đạt G & Du Uyên</a></p>
+<p><span class="text-muted">08. </span> <a href="https://hopamviet.vn/chord/song/tinh-dep-den-may-cung-tan/W8IU66DW.html"> Tình đẹp đến mấy cũng tàn - Việt</a></p>
+<p><span class="text-muted">09. </span> <a href="https://hopamviet.vn/chord/song/hoa-vo-sac/W8IU67I0.html"> Hoa vô sắc - Jack & K-ICM</a></p>
+<p><span class="text-muted">10. </span> <a href="https://hopamviet.vn/chord/song/mai-mai-la-mot-loi-noi-doi/W8IU66IF.html"> Mãi mãi là một lời nói dối - Khổng Tú Quỳnh</a></p>
+<p><span class="text-muted">11. </span> <a href="https://hopamviet.vn/chord/song/ban-tinh-ca-khong-hoan-thien/W8IU668F.html"> Bản tình ca không hoàn thiện - Ngọc Khanh</a></p>
+<p><span class="text-muted">12. </span> <a href="https://hopamviet.vn/chord/song/buon-thi-cu-khoc-di/W8IU66D7.html"> Buồn thì cứ khóc đi - Lynk Lee</a></p>
+<p><span class="text-muted">13. </span> <a href="https://hopamviet.vn/chord/song/lien-khuc-chuyen-ba-mua-mua-mua-nua-dem/W8IU66OD.html"> Liên khúc Chuyện ba mùa mưa & Mưa nửa đêm - Nhiều nhạc sĩ</a></p>
+<p><span class="text-muted">14. </span> <a href="https://hopamviet.vn/chord/song/my-nhan/W8IU668Z.html"> Mỹ nhân - Hương Ly</a></p>
+<p><span class="text-muted">15. </span> <a href="https://hopamviet.vn/chord/song/em-chua-giau-anh-dieu-gi/W8IU66BO.html"> Em chưa giấu anh điều gì - D.Blue & Đạt G</a></p>
+<p><span class="text-muted">16. </span> <a href="https://hopamviet.vn/chord/song/dieu-buon-nhat-khi-yeu/W8IU6660.html"> Điều buồn nhất khi yêu - Hòa Minzy</a></p>
+<p><span class="text-muted">17. </span> <a href="https://hopamviet.vn/chord/song/em-on-khong/W8IU660F.html"> Em ổn không - Trịnh Thiên Ân</a></p>
+<p><span class="text-muted">18. </span> <a href="https://hopamviet.vn/chord/song/dung-vi-anh-ma-khoc/W8IU670O.html"> Đừng vì anh mà khóc - Quang Hùng MasterD</a></p>
+<p><span class="text-muted">19. </span> <a href="https://hopamviet.vn/chord/song/tet-ve-som-nhe-di-de-tro-ve-4/W8IU66ZF.html"> Tết về sớm nhé (Đi để trở về 4) - Phan Mạnh Quỳnh</a></p>
+<p><span class="text-muted">20. </span> <a href="https://hopamviet.vn/chord/song/em-mim-cuoi-trong-that-dep/W8IU6ZD6.html"> Em mỉm cười trông thật đẹp - Trịnh Đình Quang</a></p>
+<p><span class="text-muted">21. </span> <a href="https://hopamviet.vn/chord/song/ngai-goi-ten-con/W8IU6ZCI.html"> Ngài gọi tên con - Dương Quảng</a></p>
+<p><span class="text-muted">22. </span> <a href="https://hopamviet.vn/chord/song/hoa-nhip-giang-sinh/W8IU66E6.html"> Hòa nhịp Giáng sinh - Min</a></p>
+<p><span class="text-muted">23. </span> <a href="https://hopamviet.vn/chord/song/dau-chiu-ngoi-yen/W8IU660U.html"> Đâu chịu ngồi yên - Phương Ly & Rhymastic</a></p>
+<p><span class="text-muted">24. </span> <a href="https://hopamviet.vn/chord/song/im-still-loving-you/W8IU6ZCU.html"> I'm still loving you - Noo Phước Thịnh</a></p>
+<p><span class="text-muted">25. </span> <a href="https://hopamviet.vn/chord/song/thay-tet-lon-mung-tet-lon/W8IU66D9.html"> Thấy tết lớn, mừng tết lớn - Trúc Nhân</a></p>
+<p><span class="text-muted">26. </span> <a href="https://hopamviet.vn/chord/song/tim-em-cau-vi-song-lam/W8IU6ZDD.html"> Tìm em câu ví sông Lam - Ngô Sỹ Ngọc</a></p>
+<p><span class="text-muted">27. </span> <a href="https://hopamviet.vn/chord/song/anh-trang-tren-cao-yue-liang-zh-shang/W8IU66I8.html"> Ánh trăng trên cao (Yuè liàng zhī shàng - 月亮之上) - Phượng Hoàng Truyền Kỳ</a></p>
+<p><span class="text-muted">28. </span> <a href="https://hopamviet.vn/chord/song/du-mua-thoi-roi/W8IU66WA.html"> Dù mưa thôi rơi - Thùy Chi</a></p>
+<p><span class="text-muted">29. </span> <a href="https://hopamviet.vn/chord/song/vi-em-la-ly-do/W8IU6609.html"> Vì em là lý do - Ali Hoàng Dương</a></p>
+<p><span class="text-muted">30. </span> <a href="https://hopamviet.vn/chord/song/yeu-dung-the/W8IU66U0.html"> Yêu đừng thề - Châu Khải Phong & Chu Bin</a></p>
+</div>
+</div>
+<a class="btn btn-info btn-block" href="https://hopamviet.vn/chord/request.html" role="button">Nhấn vào đây để yêu cầu hợp âm bài hát</a><br /><div class="ct-box">
+<h5><strong>Thư viện sheet nhạc</strong></h5>
+<a href="https://hopamviet.vn/sheet"><span class="badge badge-pill badge-secondary">Tất cả sheet</span></a>
+<a href="https://hopamviet.vn/sheet/category/1/nhac-vang.html"><span class="badge badge-pill badge-secondary">Sheet Nhạc Vàng</span></a>
+<a href="https://hopamviet.vn/sheet/category//2/nhac-tru-tinh.html"><span class="badge badge-pill badge-secondary">Sheet Nhạc Trữ tình</span></a>
+<a href="https://hopamviet.vn/sheet/category/3/nhac-tre.html"><span class="badge badge-pill badge-secondary">Sheet Nhạc Trẻ</span></a>
+<a href="https://hopamviet.vn/sheet/category/4/nhac-que-huong.html"><span class="badge badge-pill badge-secondary">Sheet Nhạc Quê hương</span></a>
+<a href="https://hopamviet.vn/sheet/category/5/nhac-ngoai-loi-viet.html"><span class="badge badge-pill badge-secondary">Sheet Nhạc Ngoại lời Việt</span></a>
+<a href="https://hopamviet.vn/sheet/category/6/nhac-do.html"><span class="badge badge-pill badge-secondary">Sheet Nhạc Đỏ</span></a>
+<a href="https://hopamviet.vn/sheet/category/7/nhac-dan-ca.html"><span class="badge badge-pill badge-secondary">Sheet Nhạc Dân ca</span></a>
+<a href="https://hopamviet.vn/sheet/category/8/nhac-quoc-te.html"><span class="badge badge-pill badge-secondary">Sheet Nhạc Quốc tế</span></a>
+<a href="https://hopamviet.vn/sheet/category/9/nhac-hoc-tro.html"><span class="badge badge-pill badge-secondary">Sheet Nhạc Học trò</span></a>
+<a href="https://hopamviet.vn/sheet/category/10/nhac-thieu-nhi.html"><span class="badge badge-pill badge-secondary">Sheet Nhạc Thiếu nhi</span></a>
+<a href="https://hopamviet.vn/sheet/category/11/nhac-thanh-ca.html"><span class="badge badge-pill badge-secondary">Sheet Nhạc Thánh ca</span></a>
+<a href="https://hopamviet.vn/sheet/category/12/nhac-phat-giao.html"><span class="badge badge-pill badge-secondary">Sheet Nhạc Phật giáo</span></a>
+</div>
+<a href="http://ketoanminhtam.com" target="_blank"><img src="https://hopamviet.vn/assets/images/ads/minhtam.jpg" \></a>
+</div>
+</div>
+</div>
+</div>
+﻿
+</div>
+<div class="footer">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="float-left">
+&copy; 2014 - 2019 <a href="https://hopamviet.vn/">hopamviet.vn</a> /
+<a href="/about">Giới thiệu</a> /
+<a href="/contact">Liên hệ</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="https://hopamviet.vn/assets/js/comment.js"></script>
+</body>
+</html>
