@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Hợp âm Thụy khúc - Thanh Ngọc - Hợp Âm Việt</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hợp âm Thụy khúc - Ngồi đây [Em] với nỗi nhớ đong đầy
+Tình yêu đã [D] mang ta đi nơi nào
+[C] Nghe con...">
+<meta name="keywords" content="hop am Thuy khuc, hợp âm Thụy khúc, Thụy khúc tab, Thụy khúc hop am guitar, Thụy khúc hop am viet, lời bài hát Thụy khúc, hợp âm việt">
+<meta property="fb:pages" content="283358615146535" />
+<meta name="msvalidate.01" content="A4F771C443186B3AF5E98657276995A5" />
+<meta name="google-site-verification" content="BbYXdvNF4HGGBJqlGAWP7qLWZ4CVqIRczLv8FBZBvJo" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link href="../assets/css/bootstrap-editable.css" rel="stylesheet">
+<link href="../assets/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+<link href="../assets/css/custom.css" rel="stylesheet">
+<link href="../assets/jplayer/skin/blue.monday/css/jplayer.blue.monday.css" rel="stylesheet">
+<link rel="canonical" href="https://hopamviet.vn/chord/song/thuy-khuc/W8IU67WC.html">
+<!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
+  <![endif]-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="../assets/js/bootstrap-typeahead.min.js"></script>
+<script src="../assets/js/bootstrap-editable.min.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-78385107-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-78385107-1');
+</script>
+<script src="https://hopamviet.vn/assets/js/custom.js"></script>
+</head>
+<body>
+<style>
+	div.dropdown-multicol{
+	  width: 35em;
+	}
+	div.dropdown-row>a.dropdown-item{
+	  display:inline-block;
+	  width: 32%;
+	}
+	.navbar-nav li:hover .dropdown-menu {
+    	display: block;
+	}
+</style>
+<!-- Global navigation;-->
+<div th:replace="includes/globalNav"></div>
+
+<div class="container pt-3">
+<div class="row">
+<div class="col-lg-8">
+<div class="ct-box">
+<div class="ibar mt-2" id="22571">
+<div>
+<h1 class="h3 d-inline-block" th:text=${song.title}>Thụy khúc</h1>
+<div class="d-inline-block float-right">
+<a href="#" data-toggle="modal" data-target="#login" class="badge badge-pill badge-success"><i class="far fa-star"></i> Thích</a>
+<span class="fb-share-button" data-href="https://hopamviet.vn/chord/song/thuy-khuc/W8IU67WC.html" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Chia sẻ</a></span>
+</div>
+</div>
+<i title="Sáng tác" class="fas fa-leaf"></i> Sáng tác: <a href="https://hopamviet.vn/chord/composer/494/vu-thanh.html">Vũ Thanh</a> & <a href="https://hopamviet.vn/chord/composer/5212/kim-tuoc.html">Kim Tước</a> |
+<i class="fas fa-book"></i> <a href="https://hopamviet.vn/chord/category/3/nhac-tre.html">Nhạc Trẻ</a> |
+Điệu:
+Chưa chọn |
+<i title="Người đăng" class="fas fa-user"></i> <a href="https://hopamviet.vn/user/3/kynguyen65">admin</a> |
+<i title="Lượt xem" class="fas fa-eye" th:text=${song.visitcount}></i>
+
+</div>
+<br />
+<div id="toolbar" class="btn-toolbar">
+<div class="btn-group mr-1">
+<span class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Giảm tone" onclick="changeStyle(document.getElementById('lyric'), 'b');">b</span>
+<span class="btn btn-outline-secondary btn-sm disabled" data-toggle="tooltip" data-placement="top">[Em]</span>
+<span class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Tăng tone" onclick="changeStyle(document.getElementById('lyric'), '#');">#</span>
+</div>
+<div class="btn-group mr-1">
+<span class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Tăng cuộn trang" onclick="startScroll();"><i class="fas fa-arrow-down"></i></span>
+<span class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Giảm cuộn trang" onclick="stopScroll();"><i class="fas fa-arrow-up"></i></span>
+</div>
+<div class="btn-group mr-1">
+<span id="fontsize" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Cỡ chữ"><i class="fas fa-font fa-1x"></i></span>
+<a href="https://hopamviet.vn/chord/printsong/thuy-khuc/W8IU67WC.html" target="_blank" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="In"><i class="fas fa-print"></i></a>
+<span id="clone" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Nhân đôi lời">x2</span>
+</div>
+</div>
+<br />
+<div id="lyric" th:text=${song.lyric}>
+Ngồi đ&acirc;y [Em] với nỗi nhớ đong đầy<br />
+T&igrave;nh y&ecirc;u đ&atilde; [D] mang ta đi nơi n&agrave;o<br />
+[C] Nghe con tim nh&oacute;i đau biết ta đ&atilde; [Bm] xa xa thật [B7] xa<br />
+[Am] V&igrave; t&igrave;nh m&igrave;nh ngang trai hay [Em] v&igrave; anh sai lầm<br />
+[Am] Y&ecirc;u em [F] y&ecirc;u em trong [B7] lừa dối<br />
+<br />
+[Em] Ta b&ecirc;n nhau ng&agrave;y xưa<br />
+Mang đến cho [D] em hạnh ph&uacute;c đong đầy<br />
+[C] Y&ecirc;u anh trong ph&uacute;t gi&acirc;y<br />
+N&eacute;t tranh vẽ [G] em v&ocirc; tư hồn [E] nhi&ecirc;n<br />
+[Am] V&igrave; t&igrave;nh anh gian dối mộng sang [Em] gi&agrave;u m&agrave; em đ&acirc;u biết<br />
+Để rồi [D] anh xem t&igrave;nh [B7] y&ecirc;u như l&agrave; [Em] tr&ograve; chơi<br />
+<br />
+Một tr&ograve; [Am] chơi t&igrave;nh y&ecirc;u ng&agrave;y xưa<br />
+Em vẽ [Em] l&ecirc;n mu&ocirc;n ng&agrave;n sắc thắm<br />
+M&agrave; giờ [Am] đ&acirc;y t&igrave;nh y&ecirc;u h&ocirc;m [D] n&agrave;o<br />
+Chỉ c&ograve;n [B7] lại m&igrave;nh em cay [E] đắng<br />
+<br />
+Rồi ng&agrave;y [Am] qua sẽ qua thật nhanh<br />
+Bao b&atilde;o [Em] gi&ocirc;ng tr&ocirc;i v&agrave;o qu&ecirc;n l&atilde;ng<br />
+Chợt nhận [Am] ra m&igrave;nh y&ecirc;u nhau [D] nhiều<br />
+N&ecirc;n em sẽ [B7] chờ sẽ vẫn [Em] đợi anh<br />
+<br />
+</div>
+<div style="margin-left: -10px; margin-top: 10px">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-2439726574577759" data-ad-slot="3091825225"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<hr>
+<h5><strong>Hợp âm guitar sử dụng</strong></h5>
+<div id="show_tab" class="row">
+</div>
+<hr>
+<div class="row p-right">
+<div class="col-lg-6">
+<h5><strong>Bài hát cùng thể loại</strong></h5>
+<p> <a href="https://hopamviet.vn/chord/song/tu-do-mat-biec-ost/W8IU67II.html"><i class="fas fa-music"></i> Từ đó (Mắt biếc OST) - Phan Mạnh Quỳnh</a></p>
+<p> <a href="https://hopamviet.vn/chord/song/hoa-vo-sac/W8IU67I0.html"><i class="fas fa-music"></i> Hoa vô sắc - Jack & K-ICM</a></p>
+<p> <a href="https://hopamviet.vn/chord/song/la-xa-lia-canh/W8IU66EZ.html"><i class="fas fa-music"></i> Lá xa lìa cành - Lê Bảo Bình</a></p>
+<p> <a href="https://hopamviet.vn/chord/song/tinh-dep-den-may-cung-tan/W8IU66DW.html"><i class="fas fa-music"></i> Tình đẹp đến mấy cũng tàn - Việt</a></p>
+<p> <a href="https://hopamviet.vn/chord/song/banh-mi-khong/W8IU66D0.html"><i class="fas fa-music"></i> Bánh mì không - Đạt G & Du Uyên</a></p>
+ <p> <a href="https://hopamviet.vn/chord/song/viet-nam-toi/W8IU66ZU.html"><i class="fas fa-music"></i> Việt Nam tôi - Jack & K-ICM & Trung Lương & Chấn Quốc</a></p>
+<p> <a href="https://hopamviet.vn/chord/song/thuan-theo-y-troi/W8IU66UO.html"><i class="fas fa-music"></i> Thuận theo ý trời - Bùi Anh Tuấn</a></p>
+<p> <a href="https://hopamviet.vn/chord/song/hanh-lang-cu-ha-nho/W8IU66W7.html"><i class="fas fa-music"></i> Hành lang cũ (Hạ nhớ) - Long Nón Lá</a></p>
+<p> <a href="https://hopamviet.vn/chord/song/co-nhu-khong-co/W8IU6ZFE.html"><i class="fas fa-music"></i> Có như không có - Hiền Hồ</a></p>
+<p> <a href="https://hopamviet.vn/chord/song/vi-yeu-cu-dam-dau/W8IU6ZBZ.html"><i class="fas fa-music"></i> Vì yêu cứ đâm đầu - Min & Tee & Đen</a></p>
+</div>
+<div class="col-lg-6">
+<h5><strong>Bài hát cùng tác giả</strong></h5>
+<p><a href="https://hopamviet.vn/chord/song/dap-mo-cuoc-tinh/W8IUIO98.html"> <i class="fas fa-music"></i> Đắp mộ cuộc tình - Vũ Thanh</a></p>
+<p><a href="https://hopamviet.vn/chord/song/rao-ban-van-tho-say/W8IUZ9AO.html"> <i class="fas fa-music"></i> Rao bán vần thơ say - Vũ Thanh</a></p>
+<p><a href="https://hopamviet.vn/chord/song/mua-lanh-tan-canh/W8IUZ8CB.html"> <i class="fas fa-music"></i> Mưa lạnh tàn canh - Vũ Thanh</a></p>
+<p><a href="https://hopamviet.vn/chord/song/quy-nhon-doi-mat-nguoi-xua/W8IUI9FC.html"> <i class="fas fa-music"></i> Quy Nhơn đôi mắt người xưa - Vũ Thanh</a></p>
+<p><a href="https://hopamviet.vn/chord/song/dung-nho-nguoi-xa/W8IUZEBU.html"> <i class="fas fa-music"></i> Đừng nhớ người xa - Vũ Thanh</a></p>
+<p><a href="https://hopamviet.vn/chord/song/thanh-sau/W8IUZAOU.html"> <i class="fas fa-music"></i> Thành sầu - Vũ Thanh</a></p>
+<p><a href="https://hopamviet.vn/chord/song/chuyen-doi-con-gai-dap-mo-cuoc-tinh-2/W8IUZWEO.html"> <i class="fas fa-music"></i> Chuyện đời con gái (Đắp mộ cuộc tình 2) - Vũ Thanh</a></p>
+<p><a href="https://hopamviet.vn/chord/song/me-oi/W8IUIAOU.html"> <i class="fas fa-music"></i> Mẹ ơi - Vũ Thanh</a></p>
+<p><a href="https://hopamviet.vn/chord/song/phuong-vi/W8IUIFF7.html"> <i class="fas fa-music"></i> Phượng vĩ - Vũ Thanh</a></p>
+<p><a href="https://hopamviet.vn/chord/song/tinh-xuan/W8IUOIZ8.html"> <i class="fas fa-music"></i> Tình xuân - Vũ Thanh</a></p>
+</div>
+</div>
+<div style="margin-left: -10px; margin-top: 10px">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-2439726574577759" data-ad-slot="5358140529"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>
+<hr />
+<h5>Bình luận <span class="badge badge-secondary">1</span></h5>
+<div class="media">
+<img src="https://hopamviet.vn/assets/images/avatars/noavatar.gif" width="50" height="50" border="0" class="mr-3">
+<div class="media-body">
+<a href="#"><strong>smilegirlhav</strong> </a> <span class="text-muted float-right"><small>1 ngày trước</small></span>
+<div class="clearfix"></div>
+<p>Thanks Kynguyen 65 rất nhiều. Hopamviet đã trở thành người bạn thân quen của rất nhiều “ca lẻ” như tôi.</p>
+</div>
+</div>
+<div class="form-horizontal submitComment p-right" id="insertbeforMe">
+<h5 class="pb-2"><i class="fas fa-comments"></i> Nhập bình luận</h5>
+<form method="POST" name="comment" id="comment" action="">
+<div class="form-group row">
+<label for="username" class="col-md-2 col-form-label">Tên bạn</label>
+<div class="col-md-10">
+<input type="text" class="form-control" name="username" placeholder="Tên bạn" />
+</div>
+</div>
+<div class="form-group row">
+<label for="email" class="col-form-label col-md-2">Email</label>
+<div class="col-md-10">
+<input type="text" class="form-control" name="email" placeholder="Địa chỉ email" />
+</div>
+</div>
+<div class="form-group row">
+<label for="message" class="col-form-label col-md-2">Nội dung</label>
+<div class="col-md-10">
+<textarea class="form-control" name="message" placeholder="Nội dung bạn gửi ở ô này đều được quản trị viên chúng tôi tiếp nhận." rows="4"></textarea>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-10 offset-md-2">
+<input type="hidden" value="https://hopamviet.vn/" id="baseurl" />
+<input type="hidden" value="22571" name="song_id" />
+<input type="submit" class="btn btn-primary btn-sm" value="Gửi" />
+<input type="reset" class="btn btn-secondary btn-sm" value="Hủy" />
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div class="col-lg-4">
+<div class="ct-box">
+<div style="margin-top: -10px; margin-left: -10px">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-2439726574577759" data-ad-slot="6494446823"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+<h5><strong>Nghe bài hát</strong>
+</h5>
+<div id="fullsong" style="overflow: auto;">
+<p>
+<i class="fas fa-music"></i>
+<a href="https://hopamviet.vn/chord/singer/Thanh Ngọc"><strong style="color: #000">Thanh Ngọc</strong></a>
+<span class="float-right"><span class="badge badge-primary">Em</span></span> </p>
+<p>
+<audio controls controlsList="nodownload" preload="none"><source src="
+        https://aredir.nixcdn.com/NhacCuaTui112/ThuyKhuc-ThanhNgoc_rvy3.mp3?st=ZPc6qYRu9JWGAvTQ2203Fw&e=1577772965
+    " type="audio/mpeg">Your browser does not support the audio element. </audio>
+</p>
+</div>
+<div id="moresong" style="cursor:pointer" onclick="show_fullsong();" align="right"></div>
+</div>
+<div class="my-3"><a class="btn btn-info btn-block" href="https://hopamviet.vn/chord/request.html" role="button">Nhấn vào đây để yêu cầu hợp âm bài hát</a></div>
+<div class="ct-box">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-2439726574577759" data-ad-slot="5017713629"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<h5><strong>Xem nhiều trong tháng</strong>
+</h5>
+<p><span class="text-muted">01. </span> <a href="https://hopamviet.vn/chord/song/hanh-lang-cu-ha-nho/W8IU66W7.html"> Hành lang cũ (Hạ nhớ) - Long Nón Lá</a></p>
+<p><span class="text-muted">02. </span> <a href="https://hopamviet.vn/chord/song/tu-do-mat-biec-ost/W8IU67II.html"> Từ đó (Mắt biếc OST) - Phan Mạnh Quỳnh</a></p>
+<p><span class="text-muted">03. </span> <a href="https://hopamviet.vn/chord/song/la-xa-lia-canh/W8IU66EZ.html"> Lá xa lìa cành - Lê Bảo Bình</a></p>
+<p><span class="text-muted">04. </span> <a href="https://hopamviet.vn/chord/song/viet-nam-toi/W8IU66ZU.html"> Việt Nam tôi - Jack & K-ICM & Trung Lương & Chấn Quốc</a></p>
+<p><span class="text-muted">05. </span> <a href="https://hopamviet.vn/chord/song/thuan-theo-y-troi/W8IU66UO.html"> Thuận theo ý trời - Bùi Anh Tuấn</a></p>
+<p><span class="text-muted">06. </span> <a href="https://hopamviet.vn/chord/song/banh-mi-khong/W8IU66D0.html"> Bánh mì không - Đạt G & Du Uyên</a></p>
+<p><span class="text-muted">07. </span> <a href="https://hopamviet.vn/chord/song/co-nhu-khong-co/W8IU6ZFE.html"> Có như không có - Hiền Hồ</a></p>
+<p><span class="text-muted">08. </span> <a href="https://hopamviet.vn/chord/song/hoa-vo-sac/W8IU67I0.html"> Hoa vô sắc - Jack & K-ICM</a></p>
+<p><span class="text-muted">09. </span> <a href="https://hopamviet.vn/chord/song/tinh-dep-den-may-cung-tan/W8IU66DW.html"> Tình đẹp đến mấy cũng tàn - Việt</a></p>
+<p><span class="text-muted">10. </span> <a href="https://hopamviet.vn/chord/song/mai-mai-la-mot-loi-noi-doi/W8IU66IF.html"> Mãi mãi là một lời nói dối - Khổng Tú Quỳnh</a></p>
+<p><span class="text-muted">11. </span> <a href="https://hopamviet.vn/chord/song/ban-tinh-ca-khong-hoan-thien/W8IU668F.html"> Bản tình ca không hoàn thiện - Ngọc Khanh</a></p>
+<p><span class="text-muted">12. </span> <a href="https://hopamviet.vn/chord/song/buon-thi-cu-khoc-di/W8IU66D7.html"> Buồn thì cứ khóc đi - Lynk Lee</a></p>
+<p><span class="text-muted">13. </span> <a href="https://hopamviet.vn/chord/song/my-nhan/W8IU668Z.html"> Mỹ nhân - Hương Ly</a></p>
+<p><span class="text-muted">14. </span> <a href="https://hopamviet.vn/chord/song/lien-khuc-chuyen-ba-mua-mua-mua-nua-dem/W8IU66OD.html"> Liên khúc Chuyện ba mùa mưa & Mưa nửa đêm - Nhiều nhạc sĩ</a></p>
+<p><span class="text-muted">15. </span> <a href="https://hopamviet.vn/chord/song/em-chua-giau-anh-dieu-gi/W8IU66BO.html"> Em chưa giấu anh điều gì - D.Blue & Đạt G</a></p>
+<p><span class="text-muted">16. </span> <a href="https://hopamviet.vn/chord/song/em-on-khong/W8IU660F.html"> Em ổn không - Trịnh Thiên Ân</a></p>
+<p><span class="text-muted">17. </span> <a href="https://hopamviet.vn/chord/song/dieu-buon-nhat-khi-yeu/W8IU6660.html"> Điều buồn nhất khi yêu - Hòa Minzy</a></p>
+<p><span class="text-muted">18. </span> <a href="https://hopamviet.vn/chord/song/dung-vi-anh-ma-khoc/W8IU670O.html"> Đừng vì anh mà khóc - Quang Hùng MasterD</a></p>
+<p><span class="text-muted">19. </span> <a href="https://hopamviet.vn/chord/song/tet-ve-som-nhe-di-de-tro-ve-4/W8IU66ZF.html"> Tết về sớm nhé (Đi để trở về 4) - Phan Mạnh Quỳnh</a></p>
+</div>
+</div>
+</div>
+
+<div id="musicModal" class="modal fade" tabindex="-1" role="dialog" aria-badgeledby="myModalbadge" aria-hidden="true">
+<form action="https://hopamviet.vn/chord/insert_song" method="post">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title">Thêm bài hát mới</h4>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+Bạn chưa đăng nhập hoặc bài hát này không phải bạn đăng.
+</div>
+</div>
+</div>
+</form>
+</div>
+
+
+<div id="sheetModal" class="modal fade" tabindex="-1" role="dialog" aria-badgeledby="myModalbadge" aria-hidden="true">
+<form action="https://hopamviet.vn/chord/insert_sheet" enctype="multipart/form-data" method="post">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title">Thêm sheet nhạc</h4>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+Bạn chưa đăng nhập hoặc bài hát này không phải của bạn đăng.
+</div>
+</div>
+</div>
+</form>
+</div>
+
+
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="login">Thông báo</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+Bạn cần phải <a href="https://hopamviet.vn/auth/login.html">đăng nhập</a> để sử dụng chức năng này!
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+</div>
+</div>
+</div>
+</div>
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.3&appId=1441928299371054&autoLogAppEvents=1"></script>
+<script>
+		/*$(document).ready(function() {
+		$('#lyric').bind("cut copy paste", function(e) {
+		    e.preventDefault();
+		});
+	});*/
+	</script>
+<script src="https://hopamviet.vn/assets/js/raphael.js"></script>
+<script src="https://hopamviet.vn/assets/js/jtab.js"></script>
+<script>
+	//tu dong truot
+	var scrollValue = 1;
+	var scrolldelay;
+
+	function stopScroll() {
+	    clearTimeout(scrolldelay);
+	}
+
+	function startScroll() {
+	    window.scrollBy(0, 1);
+	    if ($(window).scrollTop() > ($('#lyric').offset().top + $('#lyric').height() - $(window).height() / 4)) {
+	            stopScroll();
+	    } else {
+	        scrolldelay = setTimeout('startScroll()', 200 / scrollValue);
+	    }
+	}
+
+	//xo ca si the hien
+	var song_expand = '<p>Xem thêm các ca sĩ khác <i class="fas fa-chevron-down"></i></p>';
+	var song_collapse = '<p>Thu gọn <i class="fas fa-chevron-up"></i></p>';
+	function show_fullsong()
+	{
+		if (document.getElementById('moresong').innerHTML == song_expand)
+		{
+			document.getElementById('fullsong').setAttribute('style', "overflow: auto;");
+			document.getElementById('moresong').innerHTML = song_collapse;
+		}
+		else if (document.getElementById('fullsong').offsetHeight > 520)
+		{
+			document.getElementById('fullsong').setAttribute('style', "max-height: 460px; overflow: hidden;");
+			document.getElementById('moresong').innerHTML = song_expand;
+		}
+	}
+	show_fullsong();
+
+
+</script>
+﻿
+</div>
+<div class="footer">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="float-left">
+&copy; 2014 - 2019 <a href="https://hopamviet.vn/">hopamviet.vn</a> /
+<a href="/about">Giới thiệu</a> /
+<a href="/contact">Liên hệ</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="https://hopamviet.vn/assets/js/comment.js"></script>
+</body>
+</html>
