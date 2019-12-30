@@ -13,18 +13,21 @@ public class Song {
 	private String lyric;
 	private Long visitcount;
 	private String key;
+	private String singer;
+	private String category;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Long getId() {
 		return id;
 	}
+
 	public Long getVisitcount() {
 		return visitcount;
 	}
 
 	public void setVisitcount(Long visitcount) {
-		this.visitcount = visitcount;
+		this.visitcount = 995L;
 	}
 
 	public void setId(Long id) {
@@ -63,7 +66,28 @@ public class Song {
 		this.key = key;
 	}
 
+	public String getSinger() {
+		return singer;
+	}
+
+	public void setSinger(String singer) {
+		this.singer = singer;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	public void increaseVisitCount() {
+		this.visitcount++;
+	}
+
 	public Song() {
+		this.visitcount = 0L;
 	}
 
 }

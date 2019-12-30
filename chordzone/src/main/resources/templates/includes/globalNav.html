@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hợp Âm+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thư viện hợp âm cực chuẩn dành cho guitar, sheet nhạc, chuyển đổi tone, hợp âm bài hát, xác định tone ca sĩ hát, nghe nhạc trực tuyến">
+    <meta name="keywords" content="hợp âm, hợp âm guitar, thư viện hợp âm, hợp âm chuẩn, đổi tông, hợp âm bài hát, hop am viet, nhạc có nốt, nhạc tờ, sheet, sheet nhạc, thông tin nhạc sĩ, chuyển đổi tông, chuyển đổi tone">
+    <meta property="fb:pages" content="283358615146535" />
+    <meta name="msvalidate.01" content="A4F771C443186B3AF5E98657276995A5" />
+    <meta name="google-site-verification" content="BbYXdvNF4HGGBJqlGAWP7qLWZ4CVqIRczLv8FBZBvJo" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="assets/css/bootstrap-editable.css" rel="stylesheet">
+    <link href="assets/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <link href="assets/jplayer/skin/blue.monday/css/jplayer.blue.monday.css" rel="stylesheet">
+    <link rel="canonical" href="https://hopamviet.vn/">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
+    <![endif]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap-typeahead.min.js"></script>
+    <script src="assets/js/bootstrap-editable.min.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-78385107-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-78385107-1');
+    </script>
+    <script src="assets/js/custom.js"></script>
+</head>
+
+<style>
+    div.dropdown-multicol{
+        width: 35em;
+    }
+    div.dropdown-row>a.dropdown-item{
+        display:inline-block;
+        width: 32%;
+    }
+    .navbar-nav li:hover .dropdown-menu {
+        display: block;
+    }
+</style>
+
+<body>
+<div th:fragment="globalNav">
+<nav class="navbar navbar-expand-xl navbar-light bg-light sticky-top">
+    <div class="container">
+        <a href="/" class="navbar-brand"><h3>Hợp Âm Plus</h3></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="main_nav">
+            <ul class="navbar-nav mr-auto pr-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="MenuTheLoai" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-book fa-lg"></i> Thể loại
+                    </a>
+                    <div class="dropdown-menu dropdown-multicol m-0" aria-labelledby="MenuTheLoai">
+                        <div class="dropdown-row">
+                            <a class="dropdown-item" href="#"><i class="fas fa-book"></i>&nbsp; Nhạc Vàng</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-book"></i>&nbsp; Nhạc Trữ tình</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-book"></i>&nbsp; Nhạc Trẻ</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-book"></i>&nbsp; Nhạc Quê hương</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-book"></i>&nbsp; Nhạc Ngoại lời Việt</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-book"></i>&nbsp; Nhạc Đỏ</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-book"></i>&nbsp; Nhạc Dân ca</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-book"></i>&nbsp; Nhạc Quốc tế</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-book"></i>&nbsp; Nhạc Học trò</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-book"></i>&nbsp; Nhạc Thiếu nhi</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-book"></i>&nbsp; Nhạc Thánh ca</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-book"></i>&nbsp; Nhạc Phật giáo</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-book"></i>&nbsp; Nhạc Chế - Vui</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="MenuDieu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-guitar fa-lg"></i> Điệu
+                    </a>
+                    <div class="dropdown-menu dropdown-multicol m-0" aria-labelledby="MenuDieu">
+                        <div class="dropdown-row">
+                            <a class="dropdown-item" href="#"><i class="fas fa-guitar"></i>&nbsp; Ballade</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-guitar"></i>&nbsp; Blues</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-guitar"></i>&nbsp; Boléro</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-guitar"></i>&nbsp; Bossa Nova</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-guitar"></i>&nbsp; Boston</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-guitar"></i>&nbsp; Chachacha</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-guitar"></i>&nbsp; Disco</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-guitar"></i>&nbsp; Fox</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-guitar"></i>&nbsp; Habanera</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-guitar"></i>&nbsp; March</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-guitar"></i>&nbsp; Pasodope</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-guitar"></i>&nbsp; Pop</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-guitar"></i>&nbsp; Rap</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-guitar"></i>&nbsp; Rhumba</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-guitar"></i>&nbsp; Rock</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-guitar"></i>&nbsp; Slow</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-guitar"></i>&nbsp; Slow Ballad</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-guitar"></i>&nbsp; Slow Rock</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-guitar"></i>&nbsp; Slow Surf</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-guitar"></i>&nbsp; Tango</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-guitar"></i>&nbsp; Twist</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-guitar"></i>&nbsp; Valse</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="MenuUser" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user fa-lg"></i>
+                    </a>
+                    <div class="dropdown-menu m-0" aria-labelledby="MenuUser">
+                        <a class="dropdown-item" href="#" rel="nofollow">Đăng nhập</a>
+                        <a class="dropdown-item" href="#" rel="nofollow">Đăng ký</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <form class="d-inline my-auto float-left w-100" method="get" action="#">
+            <div class="input-group m-0">
+                <input type="search" class="form-control" placeholder="Nhập tên bài hát, tên ca sĩ / @tên nhạc sĩ / lời" value="" name="song">
+                <span class="input-group-append">
+<button class="btn btn-primary border border-left-0" type="submit">
+<i class="fas fa-search"></i> Tìm
+</button>
+</span>
+            </div>
+        </form>
+    </div>
+</nav>
+</div>
+</body>
+</html>

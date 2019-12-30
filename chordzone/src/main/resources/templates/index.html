@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymleaf.org" lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>Hợp Âm Việt</title>
+<!--<title>Hợp Âm Việt</title>-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Thư viện hợp âm cực chuẩn dành cho guitar, sheet nhạc, chuyển đổi tone, hợp âm bài hát, xác định tone ca sĩ hát, nghe nhạc trực tuyến">
 <meta name="keywords" content="hợp âm, hợp âm guitar, thư viện hợp âm, hợp âm chuẩn, đổi tông, hợp âm bài hát, hop am viet, nhạc có nốt, nhạc tờ, sheet, sheet nhạc, thông tin nhạc sĩ, chuyển đổi tông, chuyển đổi tone">
@@ -48,90 +48,8 @@
     	display: block;
 	}
 </style>
-<nav class="navbar navbar-expand-xl navbar-light bg-light sticky-top">
-<div class="container">
-<a href="https://hopamviet.vn/" class="navbar-brand"><h3>Hợp Âm Việt</h3></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="navbar-collapse collapse" id="main_nav">
-<ul class="navbar-nav mr-auto pr-4">
-<li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle" href="#" id="MenuTheLoai" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-<i class="fas fa-book fa-lg"></i> Thể loại
-</a>
-<div class="dropdown-menu dropdown-multicol m-0" aria-labelledby="MenuTheLoai">
-<div class="dropdown-row">
-<a class="dropdown-item" href="https://hopamviet.vn/chord/category/1/nhac-vang.html"><i class="fas fa-book"></i>&nbsp; Nhạc Vàng</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/category/2/nhac-tru-tinh.html"><i class="fas fa-book"></i>&nbsp; Nhạc Trữ tình</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/category/3/nhac-tre.html"><i class="fas fa-book"></i>&nbsp; Nhạc Trẻ</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/category/4/nhac-que-huong.html"><i class="fas fa-book"></i>&nbsp; Nhạc Quê hương</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/category/5/nhac-ngoai-loi-viet.html"><i class="fas fa-book"></i>&nbsp; Nhạc Ngoại lời Việt</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/category/6/nhac-do.html"><i class="fas fa-book"></i>&nbsp; Nhạc Đỏ</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/category/7/nhac-dan-ca.html"><i class="fas fa-book"></i>&nbsp; Nhạc Dân ca</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/category/8/nhac-quoc-te.html"><i class="fas fa-book"></i>&nbsp; Nhạc Quốc tế</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/category/9/nhac-hoc-tro.html"><i class="fas fa-book"></i>&nbsp; Nhạc Học trò</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/category/10/nhac-thieu-nhi.html"><i class="fas fa-book"></i>&nbsp; Nhạc Thiếu nhi</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/category/11/nhac-thanh-ca.html"><i class="fas fa-book"></i>&nbsp; Nhạc Thánh ca</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/category/12/nhac-phat-giao.html"><i class="fas fa-book"></i>&nbsp; Nhạc Phật giáo</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/category/13/nhac-che-vui.html"><i class="fas fa-book"></i>&nbsp; Nhạc Chế - Vui</a>
-</div>
-</div>
-</li>
-<li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle" href="#" id="MenuDieu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-<i class="fas fa-guitar fa-lg"></i> Điệu
-</a>
-<div class="dropdown-menu dropdown-multicol m-0" aria-labelledby="MenuDieu">
-<div class="dropdown-row">
-<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/6/ballade.html"><i class="fas fa-guitar"></i>&nbsp; Ballade</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/5/blues.html"><i class="fas fa-guitar"></i>&nbsp; Blues</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/1/bolero.html"><i class="fas fa-guitar"></i>&nbsp; Boléro</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/15/bossa-nova.html"><i class="fas fa-guitar"></i>&nbsp; Bossa Nova</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/11/boston.html"><i class="fas fa-guitar"></i>&nbsp; Boston</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/7/chachacha.html"><i class="fas fa-guitar"></i>&nbsp; Chachacha</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/8/disco.html"><i class="fas fa-guitar"></i>&nbsp; Disco</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/12/fox.html"><i class="fas fa-guitar"></i>&nbsp; Fox</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/17/habanera.html"><i class="fas fa-guitar"></i>&nbsp; Habanera</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/19/march.html"><i class="fas fa-guitar"></i>&nbsp; March</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/20/pasodope.html"><i class="fas fa-guitar"></i>&nbsp; Pasodope</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/16/pop.html"><i class="fas fa-guitar"></i>&nbsp; Pop</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/22/rap.html"><i class="fas fa-guitar"></i>&nbsp; Rap</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/9/rhumba.html"><i class="fas fa-guitar"></i>&nbsp; Rhumba</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/13/rock.html"><i class="fas fa-guitar"></i>&nbsp; Rock</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/2/slow.html"><i class="fas fa-guitar"></i>&nbsp; Slow</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/21/slow-ballad.html"><i class="fas fa-guitar"></i>&nbsp; Slow Ballad</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/3/slow-rock.html"><i class="fas fa-guitar"></i>&nbsp; Slow Rock</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/4/slow-surf.html"><i class="fas fa-guitar"></i>&nbsp; Slow Surf</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/10/tango.html"><i class="fas fa-guitar"></i>&nbsp; Tango</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/18/twist.html"><i class="fas fa-guitar"></i>&nbsp; Twist</a>
-<a class="dropdown-item" href="https://hopamviet.vn/chord/rhythm/14/valse.html"><i class="fas fa-guitar"></i>&nbsp; Valse</a>
-</div>
-</div>
-</li>
-<li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle" href="#" id="MenuUser" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-<i class="fas fa-user fa-lg"></i>
-</a>
-<div class="dropdown-menu m-0" aria-labelledby="MenuUser">
-<a class="dropdown-item" href="https://hopamviet.vn/auth/login.html" rel="nofollow">Đăng nhập</a>
-<a class="dropdown-item" href="https://hopamviet.vn/auth/register.html" rel="nofollow">Đăng ký</a>
-</div>
-</li>
-</ul>
-</div>
-<form class="d-inline my-auto float-left w-100" method="get" action="https://hopamviet.vn/chord/search.html">
-<div class="input-group m-0">
-<input type="search" class="form-control" placeholder="Nhập tên bài hát, tên ca sĩ / @tên nhạc sĩ / lời" value="" name="song">
-<span class="input-group-append">
-<button class="btn btn-primary border border-left-0" type="submit">
-<i class="fas fa-search"></i> Tìm
-</button>
-</span>
-</div>
-</form>
-</div>
-</nav>
+<!--nav-->
+<div th:replace="/includes/globalNav :: globalNav"> </div>
 <div class="container pt-3">
 <div class="row">
 <div class="col-lg-8">
@@ -167,12 +85,11 @@ Tình yêu đã [D] mang ta đi nơi nào
 
 <div style="background:#eee; border:0; height: 1px; margin: 10px 0;"> </div>
 </div>
-
 <div class="col-12" th:each="song : ${listProducts}">
     <h5>
         <i class="fas fa-guitar fa-fw"></i>
-        <a href="https://hopamviet.vn/chord/song/chuc-mung-giang-sinh/W8IU67WB.html" th:text=${song.title}>
-            Chúc mừng Giáng sinh
+        <a href="https://hopamplus.com" th:href="@{'/view/' + ${song.id}}" th:text=${song.title}>
+            song.title
         </a>
         <small> &nbsp;<i class="fas fa-user"></i> Sáng tác:
             <a href="https://hopamviet.vn/chord/composer/5059/tran-minh-trung.html" th:text=${song.artist}>Trần Minh Trung</a>
@@ -190,6 +107,8 @@ Tình yêu đã [D] mang ta đi nơi nào
 <!--        &nbsp;&nbsp;&nbsp;&nbsp;-->
 <!--        <a th:href="@{'/delete/' + ${song.id}}">Delete</a>-->
 <!--    </td>-->
+    <small><span class="text-muted">Ca sĩ thể hiện: </span><em><a href="https://hopamviet.vn/chord/singer/Quỳnh Trang & Thiên Quang" class="csinger" th:text=${song.singer}>Singer_name</a></em></small> <a href="https://hopamviet.vn/chord/category/1/nhac-vang.html"><span class="float-right text-muted small" th:text=${song.singer}>The_loai</span></a>
+    <div class="clearfix"></div>
 </div>
 
 <div class="col-12">

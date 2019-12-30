@@ -43,6 +43,18 @@ public class AppController {
 		mav.addObject("product", song);
 		return mav;
 	}
+
+	@RequestMapping("/view/{id}")
+	public ModelAndView showViewProductForm(@PathVariable(name = "id") Long id) {
+		ModelAndView mav = new ModelAndView("view_song");
+		Song song = service.get(id);
+		if(song != null){
+			song.increaseVisitCount();
+		}
+		mav.addObject("song", song);
+		return mav;
+	}
+
 	@RequestMapping("/delete/{id}")
 	public String deleteProduct(@PathVariable(name = "id") Long id) {
 		service.delete(id);
