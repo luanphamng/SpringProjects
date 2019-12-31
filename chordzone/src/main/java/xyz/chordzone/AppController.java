@@ -9,9 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 @Controller
 public class AppController {
@@ -21,7 +19,20 @@ public class AppController {
 	@RequestMapping("/")
 	public String viewHomePage(Model model) {
 		List<Song> listSongs = service.listAll();
-		model.addAttribute("listSongs", listSongs);
+		List<Song> listTruncate = new LinkedList<Song>();
+		Iterator<Song> it = listSongs.iterator();
+		while(it.hasNext()){
+			Song modelSong = new Song();
+			modelSong = it.next();
+			String fullLyric = modelSong.getLyric();
+			if(modelSong.getLyric().length() >= 200){
+				modelSong.setLyric(fullLyric.substring(0, 200) + "...");
+			}
+			else{
+			}
+			listTruncate.add(modelSong);
+		}
+		model.addAttribute("listSongs", listTruncate);
 		return "index";
 	}
 	@RequestMapping("/new_song")
@@ -54,11 +65,7 @@ public class AppController {
 			song.increaseVisitCount();
 			service.save(song);
 		}
-		Song modelSong = new Song();
-		modelSong = song;
-		String fullLyric = song.getLyric();
-		modelSong.setLyric(fullLyric.substring(0, 200));
-		mav.addObject("song", modelSong);
+		mav.addObject("song", song);
 		return mav;
 	}
 
