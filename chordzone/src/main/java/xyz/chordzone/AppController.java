@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 @Controller
@@ -18,25 +20,25 @@ public class AppController {
 	
 	@RequestMapping("/")
 	public String viewHomePage(Model model) {
-		List<Song> listProducts = service.listAll();
-		model.addAttribute("listProducts", listProducts);
+		List<Song> listSongs = service.listAll();
+		model.addAttribute("listSongs", listSongs);
 		return "index";
 	}
-	@RequestMapping("/new_product")
-	public String showNewProductForm(Model model) {
+	@RequestMapping("/new_song")
+	public String showNewSongForm(Model model) {
 		Song song = new Song();
-		model.addAttribute("product", song);
-		return "new_product";
+		model.addAttribute("song", song);
+		return "new_song";
 	}
 	
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
-	public String saveProduct(@ModelAttribute("product") Song song) {
+	public String saveSong(@ModelAttribute("product") Song song) {
 		service.save(song);
 		return "redirect:/";
 	}
 	
 	@RequestMapping("/edit/{id}")
-	public ModelAndView showEditProductForm(@PathVariable(name = "id") Long id) {
+	public ModelAndView showEditSongForm(@PathVariable(name = "id") Long id) {
 		ModelAndView mav = new ModelAndView("edit_product");
 		
 		Song song = service.get(id);
@@ -45,18 +47,23 @@ public class AppController {
 	}
 
 	@RequestMapping("/view/{id}")
-	public ModelAndView showViewProductForm(@PathVariable(name = "id") Long id) {
+	public ModelAndView showViewSongForm(@PathVariable(name = "id") Long id) {
 		ModelAndView mav = new ModelAndView("view_song");
 		Song song = service.get(id);
 		if(song != null){
 			song.increaseVisitCount();
+			service.save(song);
 		}
-		mav.addObject("song", song);
+		Song modelSong = new Song();
+		modelSong = song;
+		String fullLyric = song.getLyric();
+		modelSong.setLyric(fullLyric.substring(0, 200));
+		mav.addObject("song", modelSong);
 		return mav;
 	}
 
 	@RequestMapping("/delete/{id}")
-	public String deleteProduct(@PathVariable(name = "id") Long id) {
+	public String deleteSong(@PathVariable(name = "id") Long id) {
 		service.delete(id);
 		return "redirect:/";
 	}

@@ -1,20 +1,24 @@
 package xyz.chordzone;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Comparator;
+import java.util.Date;
 
 @Entity
-public class Song {
+public class Song implements Comparable<Song>{
 	private Long id;
 	private String title;
 	private String artist;
 	private String lyric;
 	private Long visitcount;
-	private String key;
+	// The main key of music like Bm, Am or C, ...
+	private String gam;
 	private String singer;
 	private String category;
+
+	// String format for date time in the DB is 2011-03-13 02:53:50
+	@Temporal(value= TemporalType.TIMESTAMP)
+	private Date postdate;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,7 +31,7 @@ public class Song {
 	}
 
 	public void setVisitcount(Long visitcount) {
-		this.visitcount = 995L;
+		this.visitcount = visitcount;
 	}
 
 	public void setId(Long id) {
@@ -58,12 +62,12 @@ public class Song {
 		this.lyric = lyric;
 	}
 
-	public String getKey() {
-		return key;
+	public String getGam() {
+		return gam;
 	}
 
-	public void setKey(String key) {
-		this.key = key;
+	public void setGam(String gam) {
+		this.gam = gam;
 	}
 
 	public String getSinger() {
@@ -86,8 +90,27 @@ public class Song {
 		this.visitcount++;
 	}
 
+	public Date getPostdate() {
+		return postdate;
+	}
+
+	public void setPostdate(Date postdate) {
+		this.postdate = postdate;
+	}
+
 	public Song() {
 		this.visitcount = 0L;
+	}
+
+	public Song(Long visitcount) {
+		this.visitcount = 0L;
+	}
+
+	// Additional functions
+
+	@Override
+	public int compareTo(Song s) {
+		return getPostdate().compareTo(s.getPostdate());
 	}
 
 }
