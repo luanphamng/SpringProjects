@@ -62,7 +62,7 @@
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 </div>
-<div class="ct-heading"><a href="https://hopamviet.vn/chord/latest.html"> BÀI HÁT MỚI ĐĂNG</a> <a href="https://hopamviet.vn/chord/latest/10.html" class="float-right"><em>Xem thêm <i class="fas fa-arrow-right"></i></em> </a></div>
+<div class="ct-heading"><a href="/new_song"> ĐĂNG BÀI HÁT MỚI </a> <a href="https://hopamviet.vn/chord/latest/10.html" class="float-right"><em>Xem thêm <i class="fas fa-arrow-right"></i></em> </a></div>
 <div class="row  p-right">
 <div class="col-12">
 <h5>
@@ -85,18 +85,20 @@ Tình yêu đã [D] mang ta đi nơi nào
 
 <div style="background:#eee; border:0; height: 1px; margin: 10px 0;"> </div>
 </div>
-<div class="col-12" th:each="song : ${listProducts}">
+<div class="col-12" th:each="song : ${listSongs}">
     <h5>
         <i class="fas fa-guitar fa-fw"></i>
         <a href="https://hopamplus.com" th:href="@{'/view/' + ${song.id}}" th:text=${song.title}>
             song.title
         </a>
         <small> &nbsp;<i class="fas fa-user"></i> Sáng tác:
-            <a href="https://hopamviet.vn/chord/composer/5059/tran-minh-trung.html" th:text=${song.artist}>Trần Minh Trung</a>
+            <a href="https://hopamviet.vn/chord/composer/5059/tran-minh-trung.html" th:text=${song.artist}>song_artist</a>
             <a href="https://hopamviet.vn/sheet/song/chuc-mung-giang-sinh/W8IU67WB.html" data-toggle="tooltip" data-placement="top" title="Sheet ca khúc Chúc mừng Giáng sinh">&nbsp;<i class="fas fa-file-alt" style="color:#5CB85C"></i></a>
         </small>
     </h5>
-
+    <em th:text=${song.lyric}>
+        song_lyric
+    </em>
 <!--    <td th:text=${song.id}>Product ID</td>-->
 <!--    <td th:text=${song.title}>Name</td>-->
 <!--    <td th:text=${song.artist}>Brand</td>-->
@@ -107,7 +109,7 @@ Tình yêu đã [D] mang ta đi nơi nào
 <!--        &nbsp;&nbsp;&nbsp;&nbsp;-->
 <!--        <a th:href="@{'/delete/' + ${song.id}}">Delete</a>-->
 <!--    </td>-->
-    <small><span class="text-muted">Ca sĩ thể hiện: </span><em><a href="https://hopamviet.vn/chord/singer/Quỳnh Trang & Thiên Quang" class="csinger" th:text=${song.singer}>Singer_name</a></em></small> <a href="https://hopamviet.vn/chord/category/1/nhac-vang.html"><span class="float-right text-muted small" th:text=${song.singer}>The_loai</span></a>
+    <small><span class="text-muted">Ca sĩ thể hiện: </span><em><a href="https://hopamviet.vn/chord/singer/Quỳnh Trang & Thiên Quang" class="csinger" th:text=${song.singer}>Singer_name</a></em></small> <a href="https://hopamviet.vn/chord/category/1/nhac-vang.html"><span class="float-right text-muted small" th:text=${song.postdate}>post_time</span></a>
     <div class="clearfix"></div>
 </div>
 
@@ -131,185 +133,7 @@ Mừng chúa giáng [C7] sinh năm nay [F] gạt hết nỗi [B7]&#8230; </em>
 <div class="clearfix"></div>
 <div style="background:#eee; border:0; height: 1px; margin: 10px 0;"> </div>
 </div>
-<div class="col-12">
-<h5>
-<i class="fas fa-guitar fa-fw"></i>
-<a href="https://hopamviet.vn/chord/song/lien-khuc-sao-khong-thay-anh-ve-nhung-doi-hoa-sim/W8IU67WA.html">
-Liên khúc Sao không thấy anh về & Những đồi hoa sim
-</a>
-<small> &nbsp;<i class="fas fa-user"></i> Sáng tác:
-<a href="https://hopamviet.vn/chord/composer/50/duy-khanh.html">Duy Khánh</a> & <a href="https://hopamviet.vn/chord/composer/26/dzung-chinh.html">Dzũng Chinh</a>
-</small>
-</h5>
-<em>
-1. Anh nói rằng anh sẽ về [Am] thăm quê miền trung
-Dù năm tháng [G] dài đường xa lạnh [Am] lùng
-Dòng [G] sông hương còn trôi, vầng [F] trăng xưa còn soi
-Sao [G] không thấy anh [E7]&#8230; </em>
-<br />
-<small><span class="text-muted">Ca sĩ thể hiện: </span><em><a href="https://hopamviet.vn/chord/singer/Quỳnh Trang & Thiên Quang" class="csinger">Quỳnh Trang & Thiên Quang</a></em></small> <a href="https://hopamviet.vn/chord/category/1/nhac-vang.html"><span class="float-right text-muted small">Nhạc Vàng</span></a>
-<div class="clearfix"></div>
-<div style="background:#eee; border:0; height: 1px; margin: 10px 0;"> </div>
-</div>
-<div class="col-12">
-<h5>
-<i class="fas fa-guitar fa-fw"></i>
-<a href="https://hopamviet.vn/chord/song/doi-anh-den-cuoi-em-dng-n-q-w/W8IU67W9.html">
-Đợi anh đến cưới em (Děng nǐ qǔ wǒ - 等你娶我)
-</a>
-<small> &nbsp;<i class="fas fa-user"></i> Sáng tác:
-<a href="https://hopamviet.vn/chord/composer/88/nhac-hoa.html">Nhạc Hoa</a>
-</small>
-</h5>
-<em>
-Intro: [C][Am]-[Dm][G]-[Em][Am]-[Dm][G][C]
-1. 为何不说你爱我
-[C] Wèi hé bù shuō nǐ ài [Em] wǒ
-难道还在考验我
-[F] Nán dào hái zài kǎo yàn [C] wǒ
-你还真的猜对了
-[F] Nǐ hái zhēn de cāi duì [Dm] le
-爱情不是随便的
-Ai qíng [G] bù shì suí&#8230; </em>
-<br />
-<small><span class="text-muted">Ca sĩ thể hiện: </span><em><a href="https://hopamviet.vn/chord/singer/Anh Shizhe & Zhang Xiaoming" class="csinger">Anh Shizhe & Zhang Xiaoming</a></em></small> <a href="https://hopamviet.vn/chord/category/8/nhac-quoc-te.html"><span class="float-right text-muted small">Nhạc Quốc tế</span></a>
-<div class="clearfix"></div>
-<div style="background:#eee; border:0; height: 1px; margin: 10px 0;"> </div>
-</div>
-<div class="col-12">
-<h5>
-<i class="fas fa-guitar fa-fw"></i>
- <a href="https://hopamviet.vn/chord/song/nhat-dinh-phai-yeu-anh-y-ding-yao-ai-n/W8IU67W8.html">
-Nhất định phải yêu anh (Yī dìng yào ài nǐ - 一定要爱你)
-</a>
-<small> &nbsp;<i class="fas fa-user"></i> Sáng tác:
-<a href="https://hopamviet.vn/chord/composer/88/nhac-hoa.html">Nhạc Hoa</a>
-</small>
-</h5>
-<em>
-Intro: [G][Em]-[C][D7]-[Em][A]-[D7][G]
-1. 雖然我們相識的日子 還是短暫的
-Suī rán [G] wǒ men xiāng shí de rì zi [Bm] hái shì duǎn zàn de
-可是我已深深把你來愛了
-kě shì [Em] wǒ yǐ shēn shēn bǎ nǐ lái ài [Bm] le
-你的天真和你的純情 已把我吸引了
-nǐ de [C]&#8230; </em>
-<br />
-<small><span class="text-muted">Ca sĩ thể hiện: </span><em><a href="https://hopamviet.vn/chord/singer/Ngô Tử Hàm" class="csinger">Ngô Tử Hàm</a></em></small> <a href="https://hopamviet.vn/chord/category/8/nhac-quoc-te.html"><span class="float-right text-muted small">Nhạc Quốc tế</span></a>
-<div class="clearfix"></div>
-<div style="background:#eee; border:0; height: 1px; margin: 10px 0;"> </div>
-</div>
-<div class="col-12">
-<h5>
-<i class="fas fa-guitar fa-fw"></i>
-<a href="https://hopamviet.vn/chord/song/em-la-hanh-phuc-cua-anh-n-shi-w-di-xing-fu/W8IU67W7.html">
-Em là hạnh phúc của anh (Nǐ shì wǒ dí xìng fú - 你是我的幸福)
-</a>
-<small> &nbsp;<i class="fas fa-user"></i> Sáng tác:
-<a href="https://hopamviet.vn/chord/composer/88/nhac-hoa.html">Nhạc Hoa</a>
-</small>
-</h5>
-<em>
-Intro: [C][Am]-[F][G]-[Em][Am]-[Dm][G][C]
-1. yuè guāng [C] rú xǐ zhào liàng le [Am] hēi yè
-月 光 如 洗 照 亮 了 黑 夜
-wǒ de [F] sī niàn rú mó zài jiū [G] jié
-我 的 思 念 如 魔&#8230; </em>
-<br />
-<small><span class="text-muted">Ca sĩ thể hiện: </span><em><a href="https://hopamviet.vn/chord/singer/Takayasu" class="csinger">Takayasu</a></em></small> <a href="https://hopamviet.vn/chord/category/8/nhac-quoc-te.html"><span class="float-right text-muted small">Nhạc Quốc tế</span></a>
-<div class="clearfix"></div>
-<div style="background:#eee; border:0; height: 1px; margin: 10px 0;"> </div>
-</div>
-<div class="col-12">
-<h5>
-<i class="fas fa-guitar fa-fw"></i>
-<a href="https://hopamviet.vn/chord/song/kiep-nay-gap-lai-chang-jn-shng-yu-jian-n/W8IU67W6.html">
-Kiếp này gặp lại chàng (Jīn shēng yù jiàn nǐ - 今生遇见你)
-</a>
-<small> &nbsp;<i class="fas fa-user"></i> Sáng tác:
-<a href="https://hopamviet.vn/chord/composer/88/nhac-hoa.html">Nhạc Hoa</a>
-</small>
-</h5>
-<em>
-Intro: [D][Bm]-[Em][A]-[D][Bm]-[Em][A][D]
-1. 红尘遇见你 让我爱上你
-[D] Hóngchén yùjiàn nǐ [Bm] ràng wǒ ài shàng nǐ
-深深把你放在我心底
-[Em] Shēn shēn bǎ nǐ fàng zài [A] wǒ xīndǐ
-前世的约定 今生的相遇
-[D] Qiánshì de yuēdìng [Bm] jīnshēng de xiāngyù
-今生的缘今生再继续
-[Em] Jīnshēng de&#8230; </em>
-<br />
-<small><span class="text-muted">Ca sĩ thể hiện: </span><em><a href="https://hopamviet.vn/chord/singer/Kỳ Long & Nhậm Diệu Âm" class="csinger">Kỳ Long & Nhậm Diệu Âm</a></em></small> <a href="https://hopamviet.vn/chord/category/8/nhac-quoc-te.html"><span class="float-right text-muted small">Nhạc Quốc tế</span></a>
-<div class="clearfix"></div>
-<div style="background:#eee; border:0; height: 1px; margin: 10px 0;"> </div>
-</div>
-<div class="col-12">
-<h5>
-<i class="fas fa-guitar fa-fw"></i>
-<a href="https://hopamviet.vn/chord/song/hong-tran-huu-duyen-hong-chen-yu-yuan/W8IU67WZ.html">
-Hồng trần hữu duyên (Hóng chén yǒu yuán - 紅塵有緣)
-</a>
-<small> &nbsp;<i class="fas fa-user"></i> Sáng tác:
-<a href="https://hopamviet.vn/chord/composer/88/nhac-hoa.html">Nhạc Hoa</a>
-</small>
-</h5>
-<em>
-Intro: [D][F#m]-[Bm][Em]-[F#m][Em][Bm]-[Em][A][D]
-1. 春花残了还会艳
-chūn huā [D] cán liǎo huán huì [F#m] yàn
-秋月缺了还会圆
-qiū yuè [Bm] quē liǎo huán huì [Em] yuán
-天上人间看一遍
-tiān shàng [F#m] rén jiān kàn yī [Bm] biàn
-有情的人总会把手牵
-yǒu qíng [Em] dí rén zǒng&#8230; </em>
-<br />
-<small><span class="text-muted">Ca sĩ thể hiện: </span><em><a href="https://hopamviet.vn/chord/singer/An Đông Dương & Mộ Dung Hiểu" class="csinger">An Đông Dương & Mộ Dung Hiểu</a></em></small> <a href="https://hopamviet.vn/chord/category/8/nhac-quoc-te.html"><span class="float-right text-muted small">Nhạc Quốc tế</span></a>
-<div class="clearfix"></div>
-<div style="background:#eee; border:0; height: 1px; margin: 10px 0;"> </div>
-</div>
-<div class="col-12">
-<h5>
-<i class="fas fa-guitar fa-fw"></i>
-<a href="https://hopamviet.vn/chord/song/ai-se-thay-em-yeu-lai-anh/W8IU67WU.html">
-Ai sẽ thay em yêu lại anh
-</a>
-<small> &nbsp;<i class="fas fa-user"></i> Sáng tác:
-<a href="https://hopamviet.vn/chord/composer/2679/mai-fin.html">Mai Fin</a>
-</small>
-</h5>
-<em>
-[Am] Em đã tổn [E] thương [G] khi người quay [Am] bước
-[F] Đôi tay run [G] run ôm con [C] tim đầy vết [E] xước
-[Am] Ta lạc mất [E] nhau, [C] nếu có ngày [G] sau
-[F] Ai&#8230; </em>
-<br />
-<small><span class="text-muted">Ca sĩ thể hiện: </span><em><a href="https://hopamviet.vn/chord/singer/Thái Trinh" class="csinger">Thái Trinh</a></em></small> <a href="https://hopamviet.vn/chord/category/3/nhac-tre.html"><span class="float-right text-muted small">Nhạc Trẻ</span></a>
-<div class="clearfix"></div>
-<div style="background:#eee; border:0; height: 1px; margin: 10px 0;"> </div>
-</div>
-<div class="col-12">
-<h5>
-<i class="fas fa-guitar fa-fw"></i>
-<a href="https://hopamviet.vn/chord/song/tuoi-muoi-lam/W8IU67WO.html">
-Tuổi mười lăm (Tuổi 15)
-</a>
-<small> &nbsp;<i class="fas fa-user"></i> Sáng tác:
-<a href="https://hopamviet.vn/chord/composer/377/truong-quang-luc.html">Trương Quang Lục</a>
-</small>
-</h5>
-<em>
-1. Em bước [D] vào tuổi mười [Em] lăm
-Bao mới [F#m] lạ đến [A7] dần theo tháng [D] năm
-Bao ước [G] vọng và mộng [Em] mơ
-Nhẹ nhàng [G] như vần [A7] điệu những dòng [D] thơ
-Dịu&#8230; </em>
-<br />
-<small><span class="text-muted">Ca sĩ thể hiện: </span><em><a href="https://hopamviet.vn/chord/singer/V.A" class="csinger">V.A</a>, <a href="https://hopamviet.vn/chord/singer/Tam ca thiếu nhi Tân Bình" class="csinger">Tam ca thiếu nhi Tân Bình</a></em></small> <a href="https://hopamviet.vn/chord/category/10/nhac-thieu-nhi.html"><span class="float-right text-muted small">Nhạc Thiếu nhi</span></a>
-<div class="clearfix"></div>
-</div>
+
 <div class="mx-auto pt-2">
 <a href="https://hopamviet.vn/chord/latest/10.html" class="btn btn-outline-primary btn-sm">Xem thêm</a>
 </div>
