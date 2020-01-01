@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 @Controller
@@ -19,6 +22,7 @@ public class AppController {
 	@RequestMapping("/")
 	public String viewHomePage(Model model) {
 		List<Song> listSongs = service.listAll();
+		Collections.sort(listSongs);
 		List<Song> listTruncate = new LinkedList<Song>();
 		Iterator<Song> it = listSongs.iterator();
 		while(it.hasNext()){
@@ -44,6 +48,10 @@ public class AppController {
 	
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
 	public String saveSong(@ModelAttribute("product") Song song) {
+
+        SimpleDateFormat sdFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date getCurrentTime = new Date();
+	    song.setPostdate(new Date());
 		service.save(song);
 		return "redirect:/";
 	}
