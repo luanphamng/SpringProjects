@@ -92,8 +92,8 @@ Tình yêu đã [D] mang ta đi nơi nào
                                 <input type="text" class="form-control" id="exampleFormControlCategory"
                                        th:field="*{category}" placeholder="Vd: Nhạc trẻ">
 
-                                <label for="exampleFormControlChors">Hợp âm</label>
-                                <textarea class="form-control" id="exampleFormControlChors" rows="9"
+                                <label for="textBoxChords">Hợp âm</label>
+                                <textarea class="form-control" id="textBoxChords" rows="9"
                                           th:field="*{lyric}"></textarea>
 
                                 <label for="exampleFormUploadbutton">Upload file có hợp âm sẵn</label>
@@ -214,7 +214,7 @@ Tình yêu đã [D] mang ta đi nơi nào
             <div class="ct-box">
                 <h5><strong>Công cụ bổ trợ soạn tab</strong>
                 </h5>
-                <div class = "row">
+                <div class="row">
                     <div class="col">
                         <h6>Main key:</h6>
                     </div>
@@ -225,7 +225,7 @@ Tình yêu đã [D] mang ta đi nơi nào
 
                 <div class="row">
                     <div class="col">
-                        <select id="gamSelect" required onchange="chordGenerator()">
+                        <select class="dropdown-toggle" id="gamSelect" required onchange="chordGenerator()">
                             <option value="support_keyC">C</option>
                             <option value="support_keyC">C#</option>
                             <option value="support_keyD">D</option>
@@ -241,14 +241,14 @@ Tình yêu đã [D] mang ta đi nơi nào
                         </select>
                     </div>
                     <div class="col">
-                        <select id="2ndGamSelect" required onchange="chordGenerator()">
+                        <select id="2ndGamSelect" class="dropdown-toggle" required onchange="chordGenerator()">
                             <option value="support_2ndkeyA">Major</option>
                             <option value="support_2ndkeyB">Minor</option>
                         </select>
                     </div>
                 </div>
 
-                <div class = "row">
+                <div class="row">
                     <div class="col">
                         <h6>Main key:</h6>
                     </div>
@@ -256,133 +256,140 @@ Tình yêu đã [D] mang ta đi nơi nào
                         <h6>Secondary key:</h6>
                     </div>
                 </div>
+                <div id="arrayButtonOfChords" class="row">
+
+                </div>
+                <div id="arrayButtonOfChordsContinue" class="row">
+
+                </div>
             </div>
         </div>
+    </div>
 
-        <div id="musicModal" class="modal fade" tabindex="-1" role="dialog" aria-badgeledby="myModalbadge"
-             aria-hidden="true">
-            <form action="https://hopamviet.vn/chord/insert_song" method="post">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Thêm bài hát mới</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            Bạn chưa đăng nhập hoặc bài hát này không phải bạn đăng.
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-
-        <div id="sheetModal" class="modal fade" tabindex="-1" role="dialog" aria-badgeledby="myModalbadge"
-             aria-hidden="true">
-            <form action="https://hopamviet.vn/chord/insert_sheet" enctype="multipart/form-data" method="post">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Thêm sheet nhạc</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            Bạn chưa đăng nhập hoặc bài hát này không phải của bạn đăng.
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-
-        <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
-            <div class="modal-dialog" role="document">
+    <div id="musicModal" class="modal fade" tabindex="-1" role="dialog" aria-badgeledby="myModalbadge"
+         aria-hidden="true">
+        <form action="https://hopamviet.vn/chord/insert_song" method="post">
+            <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="login">Thông báo</h5>
+                        <h4 class="modal-title">Thêm bài hát mới</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        Bạn cần phải <a href="https://hopamviet.vn/auth/login.html">đăng nhập</a> để sử dụng chức năng
-                        này!
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                        Bạn chưa đăng nhập hoặc bài hát này không phải bạn đăng.
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous"
-                src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.3&appId=1441928299371054&autoLogAppEvents=1"></script>
-        <script>
-            /*$(document).ready(function() {
-            $('#lyric').bind("cut copy paste", function(e) {
-                e.preventDefault();
-            });
-        });*/
-        </script>
-        <script src="assets/js/raphael.js"></script>
-        <script src="assets/js/jtab.js"></script>
-        <script>
-            //tu dong truot
-            var scrollValue = 1;
-            var scrolldelay;
-
-            function stopScroll() {
-                clearTimeout(scrolldelay);
-            }
-
-            function startScroll() {
-                window.scrollBy(0, 1);
-                if ($(window).scrollTop() > ($('#lyric').offset().top + $('#lyric').height() - $(window).height() / 4)) {
-                    stopScroll();
-                } else {
-                    scrolldelay = setTimeout('startScroll()', 200 / scrollValue);
-                }
-            }
-
-            //xo ca si the hien
-            var song_expand = '<p>Xem thêm các ca sĩ khác <i class="fas fa-chevron-down"></i></p>';
-            var song_collapse = '<p>Thu gọn <i class="fas fa-chevron-up"></i></p>';
-
-            function show_fullsong() {
-                if (document.getElementById('moresong').innerHTML == song_expand) {
-                    document.getElementById('fullsong').setAttribute('style', "overflow: auto;");
-                    document.getElementById('moresong').innerHTML = song_collapse;
-                } else if (document.getElementById('fullsong').offsetHeight > 520) {
-                    document.getElementById('fullsong').setAttribute('style', "max-height: 460px; overflow: hidden;");
-                    document.getElementById('moresong').innerHTML = song_expand;
-                }
-            }
-
-            show_fullsong();
-
-
-        </script>
-        ﻿
+        </form>
     </div>
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="float-left">
-                        &copy; 2014 - 2019 <a href="https://hopamviet.vn/">hopamviet.vn</a> /
-                        <a href="/about">Giới thiệu</a> /
-                        <a href="/contact">Liên hệ</a>
+
+
+    <div id="sheetModal" class="modal fade" tabindex="-1" role="dialog" aria-badgeledby="myModalbadge"
+         aria-hidden="true">
+        <form action="https://hopamviet.vn/chord/insert_sheet" enctype="multipart/form-data" method="post">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Thêm sheet nhạc</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
+                    <div class="modal-body">
+                        Bạn chưa đăng nhập hoặc bài hát này không phải của bạn đăng.
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="login">Thông báo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Bạn cần phải <a href="https://hopamviet.vn/auth/login.html">đăng nhập</a> để sử dụng chức năng
+                    này!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
                 </div>
             </div>
         </div>
     </div>
-    <script src="assets/js/comment.js"></script>
-    <script src="assets/js/chordtools.js"></script>
+
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+            src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.3&appId=1441928299371054&autoLogAppEvents=1"></script>
+    <script>
+        /*$(document).ready(function() {
+        $('#lyric').bind("cut copy paste", function(e) {
+            e.preventDefault();
+        });
+    });*/
+    </script>
+    <script src="assets/js/raphael.js"></script>
+    <script src="assets/js/jtab.js"></script>
+    <script>
+        //tu dong truot
+        var scrollValue = 1;
+        var scrolldelay;
+
+        function stopScroll() {
+            clearTimeout(scrolldelay);
+        }
+
+        function startScroll() {
+            window.scrollBy(0, 1);
+            if ($(window).scrollTop() > ($('#lyric').offset().top + $('#lyric').height() - $(window).height() / 4)) {
+                stopScroll();
+            } else {
+                scrolldelay = setTimeout('startScroll()', 200 / scrollValue);
+            }
+        }
+
+        //xo ca si the hien
+        var song_expand = '<p>Xem thêm các ca sĩ khác <i class="fas fa-chevron-down"></i></p>';
+        var song_collapse = '<p>Thu gọn <i class="fas fa-chevron-up"></i></p>';
+
+        function show_fullsong() {
+            if (document.getElementById('moresong').innerHTML == song_expand) {
+                document.getElementById('fullsong').setAttribute('style', "overflow: auto;");
+                document.getElementById('moresong').innerHTML = song_collapse;
+            } else if (document.getElementById('fullsong').offsetHeight > 520) {
+                document.getElementById('fullsong').setAttribute('style', "max-height: 460px; overflow: hidden;");
+                document.getElementById('moresong').innerHTML = song_expand;
+            }
+        }
+
+        show_fullsong();
+
+
+    </script>
+    ﻿
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="float-left">
+                    &copy; 2014 - 2019 <a href="https://hopamviet.vn/">hopamviet.vn</a> /
+                    <a href="/about">Giới thiệu</a> /
+                    <a href="/contact">Liên hệ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="assets/js/comment.js"></script>
+<script src="assets/js/chordtools.js"></script>
 </body>
 </html>
