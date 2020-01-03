@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 @Controller
@@ -97,8 +95,29 @@ public class AppController {
 		return "index";
 	}
 
-	@RequestMapping("/viewMore")
-	public String viewMore(Model model){
-		return "ViewMore";
+	@RequestMapping("/viewmore/{p}")
+	public ModelAndView showViewSongForm(@PathVariable(name = "p") int p) {
+		Long total_chords = service.getTotalRows();
+
+		ModelAndView mav = new ModelAndView("view_more");
+		List<Song> s = service.get10Result(p, 2);
+
+		Collections.sort(s);
+		List<Song> listTruncate = new LinkedList<Song>();
+		Iterator<Song> it = s.iterator();
+		while (it.hasNext()) {
+			Song modelSong = new Song();
+			modelSong = it.next();
+			String fullLyric = modelSong.getLyric();
+			if (modelSong.getLyric().length() >= 200) {
+				modelSong.setLyric(fullLyric.substring(0, 200) + "...");
+			} else {
+			}
+			listTruncate.add(modelSong);
+		}
+
+		mav.addObject("listSongs", listTruncate);
+		mav.addObject("numOfPagination", total_chords / 10);
+		return mav;
 	}
 }

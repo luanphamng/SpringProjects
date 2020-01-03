@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="htpp://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Danh sách hợp âm bài hát mới nhất - Hợp Âm Việt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Danh sách những hợp âm mới cập nhật">
+    <meta name="keywords"
+          content="hợp âm, hợp âm guitar, thư viện hợp âm, hợp âm chuẩn, đổi tông, hợp âm bài hát, hop am viet, nhạc có nốt, nhạc tờ, sheet, sheet nhạc, thông tin nhạc sĩ, chuyển đổi tông, chuyển đổi tone">
+    <meta property="fb:pages" content="283358615146535"/>
+    <meta name="msvalidate.01" content="A4F771C443186B3AF5E98657276995A5"/>
+    <meta name="google-site-verification" content="BbYXdvNF4HGGBJqlGAWP7qLWZ4CVqIRczLv8FBZBvJo"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="assets/css/bootstrap-editable.css" rel="stylesheet">
+    <link href="assets/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <link href="assets/jplayer/skin/blue.monday/css/jplayer.blue.monday.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
+    <![endif]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap-typeahead.min.js"></script>
+    <script src="assets/js/bootstrap-editable.min.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-78385107-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-78385107-1');
+    </script>
+    <script src="assets/js/custom.js"></script>
+</head>
+<body>
+<style>
+    div.dropdown-multicol {
+        width: 35em;
+    }
+
+    div.dropdown-row > a.dropdown-item {
+        display: inline-block;
+        width: 32%;
+    }
+
+    .navbar-nav li:hover .dropdown-menu {
+        display: block;
+    }
+</style>
+<div th:replace="/includes/globalNav :: globalNav"></div>
+<div class="container pt-3">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="ct-box">
+                <div class="ct-heading">BÀI HÁT MỚI ĐĂNG</div>
+                <div class="row p-right">
+                    <div class="col-12" th:each="song : ${listSongs}">
+                        <h5>
+                            <i class="fas fa-guitar fa-fw"></i>
+                            <a href="https://hopamplus.com" th:href="@{'/view/' + ${song.id}}" th:text=${song.title}>
+                                song.title
+                            </a>
+                            <small> &nbsp;<i class="fas fa-user"></i> Sáng tác:
+                                <a href="https://hopamviet.vn/chord/composer/5059/tran-minh-trung.html"
+                                   th:text=${song.artist}>song_artist</a>
+                                <a href="https://hopamviet.vn/sheet/song/chuc-mung-giang-sinh/W8IU67WB.html"
+                                   data-toggle="tooltip" data-placement="top"
+                                   title="Sheet ca khúc Chúc mừng Giáng sinh">&nbsp;<i class="fas fa-file-alt"
+                                                                                       style="color:#5CB85C"></i></a>
+                            </small>
+                        </h5>
+                        <em th:text=${song.lyric}>
+                            song_lyric
+                        </em>
+                        </br>
+                        <small><span class="text-muted">Ca sĩ thể hiện: </span><em><a
+                                href="https://hopamviet.vn/chord/singer/Quỳnh Trang & Thiên Quang" class="csinger"
+                                th:text=${song.singer}>Singer_name</a></em></small> <a
+                            href="https://hopamviet.vn/chord/category/1/nhac-vang.html"><span
+                            class="float-right text-muted small" th:text=${song.postdate}>post_time</span></a>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="col-md-12">
+                        <h5>
+                            <i class="fas fa-guitar fa-fw"></i>
+                            <a href="https://hopamviet.vn/chord/song/quang-het-lo-di/W8IU67UC.html">
+                                Quẳng hết lo đi
+                            </a>
+                            <small> &nbsp;<i class="fas fa-user"></i> Sáng tác:
+                                <a href="https://hopamviet.vn/chord/composer/1887/khuong-ngoc.html">Khương Ngọc</a>
+                            </small>
+                        </h5>
+                        <em>
+                            Vòng hợp âm: [Am] [F] [C] [G]
+                            [Am] Đường đời còn lắm bi [F] hài
+                            Chẳng ai dám nói trước ngày [C] mai
+                            Sống vui hôm [G] nay
+                            Cười tươi đón vạn điều [Am] may
+                            Lắm lúc chẳng muốn gặp&#8230; </em>
+                        <br/>
+                        <small><span class="text-muted">Ca sĩ thể hiện: </span><em><a
+                                href="https://hopamviet.vn/chord/singer/Khương Ngọc" class="csinger">Khương
+                            Ngọc</a></em></small> <a href="https://hopamviet.vn/chord/category/3/nhac-tre.html"><span
+                            class="float-right text-muted small">Nhạc Trẻ</span></a>
+                        <div class="clearfix"></div>
+                        <div style="background:#eee; border:0; height: 1px; margin: 10px 0;"></div>
+                    </div>
+                </div>
+
+                <div class="pagging text-center">
+                    <nav>
+                        <ul class="pagination"> <!-- numOfPagination -->
+                            <li class="page-item" th:each="i : ${numOfPagination}"><span class="page-link"><a
+                                    th:href="@{'/viewmore/' + i">1</a></span></li>
+<!--                            <li class="page-item active"><span class="page-link">2<span class="sr-only">(current)</span></span>-->
+<!--                            </li>-->
+<!--                            <li class="page-item"><span class="page-link"><a-->
+<!--                                    href="/viewmore/3">3</a></span></li>-->
+<!--                            <li class="page-item"><span class="page-link"><a-->
+<!--                                    href="/viewmore/4">4</a></span></li>-->
+<!--                            <li class="page-item"><span class="page-link"><a-->
+<!--                                    href="/viewmore/5">>></a></span></li>-->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="ct-box">
+                <div align="center">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+                    <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px"
+                         data-ad-client="ca-pub-2439726574577759" data-ad-slot="6494446823"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <div class="ct-box">
+                    <h5><strong>Thư viện sheet nhạc</strong></h5>
+                    <a href="https://hopamviet.vn/sheet"><span
+                            class="badge badge-pill badge-secondary">Tất cả sheet</span></a>
+                    <a href="https://hopamviet.vn/sheet/category/1/nhac-vang.html"><span
+                            class="badge badge-pill badge-secondary">Sheet Nhạc Vàng</span></a>
+                    <a href="https://hopamviet.vn/sheet/category//2/nhac-tru-tinh.html"><span
+                            class="badge badge-pill badge-secondary">Sheet Nhạc Trữ tình</span></a>
+                    <a href="https://hopamviet.vn/sheet/category/3/nhac-tre.html"><span
+                            class="badge badge-pill badge-secondary">Sheet Nhạc Trẻ</span></a>
+                    <a href="https://hopamviet.vn/sheet/category/4/nhac-que-huong.html"><span
+                            class="badge badge-pill badge-secondary">Sheet Nhạc Quê hương</span></a>
+                    <a href="https://hopamviet.vn/sheet/category/5/nhac-ngoai-loi-viet.html"><span
+                            class="badge badge-pill badge-secondary">Sheet Nhạc Ngoại lời Việt</span></a>
+                    <a href="https://hopamviet.vn/sheet/category/6/nhac-do.html"><span
+                            class="badge badge-pill badge-secondary">Sheet Nhạc Đỏ</span></a>
+                    <a href="https://hopamviet.vn/sheet/category/7/nhac-dan-ca.html"><span
+                            class="badge badge-pill badge-secondary">Sheet Nhạc Dân ca</span></a>
+                    <a href="https://hopamviet.vn/sheet/category/8/nhac-quoc-te.html"><span
+                            class="badge badge-pill badge-secondary">Sheet Nhạc Quốc tế</span></a>
+                    <a href="https://hopamviet.vn/sheet/category/9/nhac-hoc-tro.html"><span
+                            class="badge badge-pill badge-secondary">Sheet Nhạc Học trò</span></a>
+                    <a href="https://hopamviet.vn/sheet/category/10/nhac-thieu-nhi.html"><span
+                            class="badge badge-pill badge-secondary">Sheet Nhạc Thiếu nhi</span></a>
+                    <a href="https://hopamviet.vn/sheet/category/11/nhac-thanh-ca.html"><span
+                            class="badge badge-pill badge-secondary">Sheet Nhạc Thánh ca</span></a>
+                    <a href="https://hopamviet.vn/sheet/category/12/nhac-phat-giao.html"><span
+                            class="badge badge-pill badge-secondary">Sheet Nhạc Phật giáo</span></a>
+                </div>
+            </div>
+            <a class="btn btn-info btn-block" href="https://hopamviet.vn/chord/request.html" role="button">Nhấn vào đây
+                để yêu cầu hợp âm bài hát</a><br/>
+            <div class="ct-box">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+                <ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px"
+                     data-ad-client="ca-pub-2439726574577759" data-ad-slot="5017713629"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </div>
+    ﻿
+</div>
+<div th:replace="/includes/footer :: footer"></div>
+<script src="https://hopamviet.vn/assets/js/comment.js"></script>
+</body>
+</html>

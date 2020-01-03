@@ -38,4 +38,8 @@ public class SongService {
 	public List<Song> get10Result(int startRow, int numOfRow){
 		return repo.get10Results(startRow, numOfRow);
 	}
+
+	public Long getTotalRows(){
+		return repo.getTotalRows();
+	}
 }
