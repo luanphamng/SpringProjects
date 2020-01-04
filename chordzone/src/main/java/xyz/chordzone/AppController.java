@@ -81,11 +81,11 @@ public class AppController {
 		return "redirect:/";
 	}
 
-	@RequestMapping("/next10")
+	@RequestMapping("/search")
 	public String get10(Model model) {
 		List<Song> s = service.retrieveByTitle("AMEE & ViruSs");
 		model.addAttribute("listSongs", s);
-		return "index";
+		return "search";
 	}
 
 	@RequestMapping("/get10Latest")
@@ -100,7 +100,7 @@ public class AppController {
 		Long total_chords = service.getTotalRows();
 
 		ModelAndView mav = new ModelAndView("view_more");
-		List<Song> s = service.get10Result(p, 2);
+		List<Song> s = service.get10Result((p - 1) * 10, 10);
 
 		Collections.sort(s);
 		List<Song> listTruncate = new LinkedList<Song>();
@@ -115,8 +115,8 @@ public class AppController {
 			}
 			listTruncate.add(modelSong);
 		}
-
 		mav.addObject("numOfPagination", total_chords / 10 + 1);
+		mav.addObject("pageToHighlight", p);
 		mav.addObject("listSongs", listTruncate);
 		return mav;
 	}
