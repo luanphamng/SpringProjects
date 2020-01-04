@@ -17,6 +17,6 @@ public interface SongRepository extends JpaRepository<Song, Long>{
     @Query("SELECT s FROM Song s ORDER BY (s.postdate) DESC")
     Song retrieve10Newest(@Param("singer") String singer);
 
-    @Query(value = "SELECT COUNT(*)", nativeQuery = true)
+    @Query(value = "SELECT COUNT(*) FROM testchorddb.song", nativeQuery = true)
     Long getTotalRows();
 }

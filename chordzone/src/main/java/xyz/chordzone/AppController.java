@@ -116,8 +116,8 @@ public class AppController {
 			listTruncate.add(modelSong);
 		}
 
+		mav.addObject("numOfPagination", total_chords / 10 + 1);
 		mav.addObject("listSongs", listTruncate);
-		mav.addObject("numOfPagination", total_chords / 10);
 		return mav;
 	}
 }
