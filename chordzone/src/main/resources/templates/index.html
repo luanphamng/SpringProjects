@@ -254,14 +254,15 @@
                         <div class="ct-box">
                             <h5><strong>Hợp âm xem nhiều</strong></h5>
                             <p th:each="song : ${listSongs}"><span class="text-muted"></span> <a
-                                    href="https://hopamplus.com" th:href="@{'/view/' + ${song.id}}" th:text=${song.title}> _song_title_thymleaf_</a></p>
+                                    href="https://hopamplus.com" th:href="@{'/view/' + ${song.id}}"
+                                    th:text=${song.title}> _song_title_thymleaf_</a></p>
                         </div>
                     </div>
                     <a class="btn btn-info btn-block" href="#" role="button">Nhấn
                         vào đây để yêu cầu hợp âm bài hát</a><br/>
                     <div class="ct-box">
                         <h5><strong>Thư viện sheet nhạc</strong></h5>
-                        <a href=#"><span
+                        <a href="#"><span
                                 class="badge badge-pill badge-secondary">Tất cả sheet</span></a>
                         <a href="#"><span
                                 class="badge badge-pill badge-secondary">Sheet Nhạc Vàng</span></a>
