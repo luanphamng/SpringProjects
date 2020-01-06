@@ -1,4 +1,411 @@
-ID,title,artist,lyric,visitcount,key
-1,"Tu do","Phan Manh Quynh","Có chàng trai viết lên [C]cây , lời yêu thương cô gái [Em]ấy ",999,Bm
-2,"Co chang trai viet len cay","Phan Manh Quynh","Chap[C] cai chap[D] ca cheng",900,Am
-3,"Tinh em con mai","My Tam","Tinh em[Am] lon nhu dai duong",99,C
+ID,title,artist,lyric,visitcount,gam,singer,category,postdate
+1,"Từ đó","Phan Mạnh Quỳnh","Có chàng trai viết lên [C]cây , lời yêu thương cô gái [Em]ấy ",1015,Bm,"Thái Nguyên","Nhạc trẻ","2019-03-13 02:53:50"
+2,"Có chàng trai viết lên cây","Phan Mạnh Quỳnh","Chap[C] cai chap[D] ca cheng",902,Am,"Phan Mạnh Quỳnh","Nhạc trẻ","2017-03-13 02:53:50"
+3,"Tình em còn mãi","Mỹ Tâm","Tinh em[Am] lon nhu dai duong",99,C,"Mỹ Tâm","Nhạc trẻ","2018-03-13 02:53:50"
+4,"Hồng Nhan",Jack,"Verse 1:
+Hồng [Am] trần trên đôi cánh tay 
+Họa [Em7] đời em trong phút giây 
+Từ ngày [G] thơ ấy còn ngủ mơ 
+Đến khi em thờ [C] ơ ờ 
+Lòng [Am] người anh đâu có hay 
+Một [Em7] ngày khi vỗ cánh bay 
+Từ người [G] yêu hóa thành người dưng 
+Đến khi ta tự [Am] xưng à
+ 
+Pre-Chorus:
+Thương em bờ [Fmaj7] vai nhỏ nhoi 
+Đôi mắt hóa mây [G] đêm 
+Thương sao mùi [Em] dạ lý hương 
+Vương vấn mãi bên [Am] thềm 
+Đời phiêu du cố [F] tìm một người thật lòng 
+Dẫu [G] trời mênh mông anh nhớ [C] em [E]
+Chim kia về [Fmaj7] vẫn có đôi 
+Sao chẳng số phu [G] thê 
+Em ơi đừng [Em] xa cách tôi 
+Trăng cố níu em [Am] về 
+Bình yên trên mái [F] nhà nhìn đời ngược dòng 
+Em [G] còn bên anh có phải [C] không? [E]
+ 
+Chorus:
+Trời ban ánh sáng, năm tháng tư [Am] bề 
+Dáng ai về chung [Em] lối 
+Người mang tia [F] nắng 
+Nhưng cớ sao [G] còn tăm [C] tối [G]
+Một mai em [Am] lỡ vấp ngã trên đời thay [Em] đổi 
+Nhìn về anh [F], người chẳng khiến [G] em lẻ [Am] loi
+ 
+[Am] [Em] [F] [C]-[G] [Am] [Em] [F]-[G] [Am]
+ 
+Rap:
+Oh! Nếu em có [Am] về 
+Anh sẽ mang hết những suy tư
+Mang hết hành [Em] trang 
+Những ngày sống khổ
+Để cho gió biển di cư
+Anh thà lênh [F] đênh không có ngày về 
+Hóa kiếp thân trai như Thủy Hử
+Chẳng đành để [C] em từ một cô bé 
+Sóng gió vây [E]quanh thành quỷ dữ 
+Ta tự đẩy [Am] mình hay tự ta trói 
+Bây giờ có khác gì đâu
+Ta chả bận [Em] lòng hay chẳng thể nói 
+Tụi mình có khác gì nhau
+Yêu sao cánh [F] điệp phủ mờ nét bút 
+Dẫu người chẳng [G] hẹn đến về sau 
+Phố thị đèn [Am] màu ta chỉ cần chung lối 
+Để rồi sống chết cũng vì nhau
+ 
+Verse 2:
+Nhặt một nhành [Am7] hoa [Am] rơi
+Đoạn đường về nhà thật buồn [Em] em ơi 
+Dòng người vội vàng giờ này [F] 
+tình ơi tình ơi tình ơi em ở đâu [C] rồi
+Lặng nhìn bờ [Am7] vai [Am] xưa 
+Tựa đầu mình hỏi rằng [Em] khổ chưa 
+Đành lòng chặn đường giờ [F] đừng
+ đi đừng đi đừng đi vì câu [E] hứa 
+ 
+Chorus:
+Trời ban ánh [C] sáng năm tháng tư [Am] bề 
+Dáng ai về chung [Em] lối 
+Người mang tia [F] nắng 
+Nhưng cớ sao [G] còn tăm [C] tối [G]
+Một mai em [Am] lỡ vấp ngã trên đời thay [Em] đổi 
+Nhìn về anh [F], người chẳng khiến [G] em lẻ [Am] loi
+ 
+Bridge:
+Ngày buồn giờ [Am] áo ai khâu vá quàng [Em] rồi 
+Lặng nhìn dòng [F] nước con sông phút bồi [C] hồi [G]
+Một lần này [Am] hỡi em ơi ở lại [Em] đi 
+Vạn trùng cơn [F] đau 
+Ngoài kia chỉ là bão [E7] tố 
+ 
+(Lên 1 tone, tốt nhất là kéo capo lên ngăn 7)
+Trời ban ánh sáng năm tháng tư [Bm] bề 
+Dáng ai về chung [F#m] lối 
+Người mang tia [G] nắng 
+Nhưng cớ sao [A] còn tăm [D] tối [A]
+",2,NULL,"Jack & KICM","Nhạc trẻ","2020-01-01 07:52:25"
+9,"Lạ Lùng",Vũ,"Kìa màn [C]đêm hiu hắt [G/B], 
+Mang tên [A7]em quay về trong ký [Dm7]ức , 
+Của [G]anh qua [C]thời gian 
+Chiều lặng [C]im nghe [G/B]gió  
+Đung đưa [A7]cây , 
+Như là bao nỗi [Dm7]nhớ  cuốn [G]anh trôi [C]về đâu ? 
+Này [F]gió đừng [G]hát , 
+Và [E7]mang  nỗi nhớ [Am]chạ̣y đi [F]quên âu lo, 
+Quên [G]hết  suy tư [C]một  đời. [C7] 
+[F]Mưa trong anh sẽ [G]vơi , 
+Nhưng [E]đôi  môi đang vấn [Am]vương , 
+[F]Chỉ tình cờ nhìn em rồi mang theo [G]những  cơn đau thét gào.
+ 
+Lạ lùng em [C]tới….[E]ới , tới [Am]bên anh  trong chiều đông xa vắng…
+mà [F]sao
+Giờ đây nhìn [G]lại chẳng còn thấy [C] em. [C7]
+Lạ lùng em [C]với....[E]gió hát [Am]lên câu ca  làm anh thao thức, 
+Mà [F]bao say mê nồng [G]nàn giờ đã phai [C]mau 
+Kìa [F]nắng ngập [G]tràn , những  giấc [Em]mơ lại vừa bay [A7]đi , 
+Gạt [F]hết cuộc đời lẻ loi. Thôi mình [G]anh, lại ngồi nhớ [C]em! ",0,NULL,Vũ,"Nhạc trẻ","2020-01-01 10:52:25"
+10,"Trời giấu trời mang đi","AMEE & ViruSs","Verse 1:
+[C]Sương mờ che khuất đồi, [C7]đêm nào em cũng ngồi
+Lúc [F]xa anh em thật sự chỉ nhớ [Fm]mãi thôi
+[Em]Tuy rằng mới bắt đầu, tình [Am]yêu này như phép màu
+Cứ [Dm]cho là vì mình chỉ mới [G]nói hẹn hò thôi
+ 
+[C]Nhưng vì anh quá tuyệt, nhìn [C7]đâu thì em cũng duyệt
+Cứ [F]như đôi mình nợ nhau từ lâu [Fm]quá nhiều
+[Em]Đâu phải ai cũng hiểu rằng [Am]khi mình nhớ quá nhiều
+Chẳng thể [Dm]tập trung làm điều gì [G]hết nữa 
+ 
+ĐK:
+Xa sẽ là nhớ [C]ngay xa là khóe [C7]mắt cay
+Xa là chỉ thấy [F]em anh cười đôi mắt [Fm]lim dim
+Xa là em sẽ [Em]tìm sẽ nhìn anh cho [A7]dù ngày hay đêm
+Gía [Dm]như ngay bây giờ được gặp nhau [G]trước thềm
+ 
+Thôi thì chỉ ướt [C]mi do là nhớ [C7]quá đi
+Chẳng hiểu sao trước [F]kia ông trời lại giấu [Fm]anh đi
+Thôi thì chẳng có [Em]gì do là em yêu [A7]nhiều tại em đó
+Cứ [Dm]coi như mây chẳng nhìn lời nói [G]gió bay
+ 
+Verse 2:
+[C]Dù ai nói rằng [Bm7b5]đời này [E7]chúng ta
+[Am]Thuộc về nhau tình yêu trăng [Gm6]sáng sao [C]băng 
+Con đường [F]đầy lá [G]rơi. nơi [Em]này mình từng [Am]đi
+Nhưng [Dm]tiếc là chẳng [G]thấy anh đâu
+ 
+[C]Dù ai nói tình [Bm7b5]anh đây [E7]mãi luôn
+[Am]Ở bên em chở che mưa [Gm6]nắng bão [C]giông
+Gió lạnh [F]đừng có [G]lo em [Em]ở ngay sau [Am]lưng
+Vẫn [Dm]biết yêu thương làm tim [G]sẽ nhớ nhung...
+ 
+ĐK:
+Xa sẽ là nhớ [C]ngay xa là khóe [C7]mắt cay
+Xa là chỉ thấy [F]em anh cười đôi mắt [Fm]lim dim
+Xa là em sẽ [Em]tìm sẽ nhìn anh cho [A7]dù ngày hay đêm
+Gía [Dm]như ngay bây giờ được gặp nhau [G]trước thềm
+ 
+Thôi thì chỉ ướt [C]mi do là nhớ [C7]quá đi
+Chẳng hiểu sao trước [F]kia ông trời lại giấu [Fm]anh đi
+Thôi thì chẳng có [Em]gì do là em yêu [A7]nhiều tại em đó
+Cứ [Dm]coi như mây chẳng nhìn lời [G]gió bay
+ 
+ĐK2
+Con đường đầy [C]nắng hoa mà sao giờ anh [C7]đã xa
+Em ngồi đây khóc [F]to do trời lại lấy [Fm]anh đi
+Yêu là vì những [Em]gì sao phải buông khi [A7]chẳng thể rời xa
+Gió [Dm]mang cơn mưa về làm lòng ai [G]não nề
+ 
+Thôi thì chỉ ướt [C#]mi do là nhớ [C#7]quá đi
+Chẳng hiểu sao trước [F#]kia ông trời lại giấu [F#m]anh đi",3,NULL,"AMEE & ViruSs","Nhạc trẻ","2020-01-01 11:02:15"
+11,"Anh sẽ yêu em đến khi nào (Nǐ huì ài wǒ dào shí me shí hòu - 你会爱我到什么时候)","Nhạc Hoa","1. 忘了是什么时候
+[D] wàng liǎo shì shí me shí [F#m] hòu
+习惯了一些问候
+[Bm] xí guàn liǎo yī xiē wèn [A] hòu
+听老情歌 最后一首
+[G] tīng lǎo qíng gē [D] zuì hòu yī shǒu
+轻轻的唇在颤抖
+[E7] qīng qīng dí chún zài chàn [A7] dǒu
+
+2. 时间像无边的海
+[D] shí jiān xiàng wú biān dí [F#m] hǎi
+我们在无力地游
+[Bm] wǒ mén zài wú lì dì [A] yóu
+思念在前后 焦心在左右
+[G] sī niàn zài qián hòu [D] jiāo xīn zài zuǒ yòu
+谁在挥舞着衣袖
+[E7] shuí zài huī wǔ zhuó yī [A7] xiù
+
+Chorus: 你会爱我到什么时候
+nǐ huì [D] ài wǒ dào shí me shí [Bm] hòu
+你会陪我到哪个路口
+nǐ huì [G] péi wǒ dào [A] nǎ gè lù [D] kǒu
+我不知道用什么理由
+wǒ bù [D] zhī dào yòng shí me lǐ [Bm] yóu
+让你可以和我厮守到白头
+ràng nǐ kě yǐ [G] hé wǒ sī [A7] shǒu dào bái [D] tóu
+
+你会爱我到什么时候
+nǐ huì [D] ài wǒ dào shí me shí [Bm] hòu
+你会等我到哪座桥头
+nǐ huì [G] děng wǒ dào [A] nǎ zuò qiáo [D] tóu
+我只剩下这一颗红豆
+wǒ zhī [D] shèng xià zhè yī kē hóng [Bm] dòu
+请你把它收下 别让风带走
+qǐng nǐ bǎ tā [G] shōu xià bié [A7] ràng fēng dài [D] zǒu",0,NULL,"Nhạc Hoa","Nhạc Hoa","2020-01-04 08:52:40"
+12,"Sám hối trước Phật đài","Trần Nhật Quang","1. Quỳ dưới Phật [Dm] đài con xin ngài linh ứng chứng [F] minh
+Rằng đời con [Am] đây đang ăn [C] năn sám hối từng [F] ngày
+Bao nhiêu năm [Gm] qua con đi tìm phù phiếm xa [Dm] hoa
+Bao nhiêu năm [Gm] qua con gieo sầu gieo khổ cho người [A7] ta.
+
+2. Vì muốn trong [Dm] tay có tiền nhiều danh lợi như [F] ai
+Nên con làm [Gm] sai biết bao [Dm] điều mà con đâu [Gm] hay
+Nay con về đây cúi xin [Dm] người mở rộng vòng [F] tay
+Đón đứa con [Gm] thơ đã bao [A7] năm lạc bến xa [Dm] bờ.
+
+ĐK:
+Phật [G] ơi! Phật [Dm] ơi!
+Xin Phật thứ tha cho đời con
+Bao năm lỗi [F] lầm nay con ngộ [G] ra nhân quả sâu [Dm] xa
+Cũng như thương [C] người như thể thương [F] ta
+Ghét người như [Am] thể ghét thân ra [Dm] rồi.
+
+3. Quỳ dưới Phật [Dm] đài con xin thề sẽ mãi nương [F] theo
+Chánh pháp từ [Gm] bi yêu thương tha thiết của [Dm] người
+Sống mang cho [C] đời cho người có được niềm [F] vui
+Sống sao đáp [C] đền công [Am] ơn Phật của con giữa [Dm] đời.",0,NULL,"Trần Nhật Quang","Nhạc Phật Giáo","2020-01-04 09:06:52"
+13,"Tuổi thơ tôi (chế Thằng Tàu Lai)","Hậu Hoàng","[G] Mùa hè về là lại [D] đi tắm sông
+[Em] Chiều nào cũng một [Bm] lũ rất đông
+[C] Mấy đứa biết bơi toàn [G] song phi cắm đầu
+[Am] Không dám chơi cầm thùng [D] xốp mà nhìn nhau
+
+[G] Quả này về nhà thì [D] chắc nát mông
+[Em] Vì mẹ tao [Bm] cấm tắm sông
+[C] Lúc nãy thấy cây nhà bà [G] Lan có xoài
+[Am] Đi hái trộm chờ [D] lúc quần áo khô.
+
+[G] Tầm giờ này nhà bà [D] Lan không có ai
+[Em] Mày trèo lên tao [Bm] đứng đây trông
+[C] Cứ vứt xuống đi rồi bọn [G] tao đỡ hộ
+[Am] Thôi chết cha! Chờ [D] tao chạy với đê.
+
+Giờ [G] này mới vác mặt [D]d về đi những đâu
+[Em] Tại hôm nay trâu bị điên đi [C] húc người [D] ta
+Làm [G] gì ướt hết cả [D quần áo thế kia
+[Em] Đường hôm nay hơi bị trơn con [C] ngã vào vũng [D] nước.
+
+Này [G] thì nước! Mấy tuổi [D] đầu đã dối gian
+[Em] Bà Lan đi qua bờ sông đã [C] thấy bọn [D] bay
+Đùa [G] nghịch dưới nước còn [D] dìm xong kéo nhau
+[Em] Bờ sông bao nhiêu hiểm nguy sau [C] cấm được [D] tắm
+
+[G] Và trò đặc biệt là trò [D] chơi bắn bi
+[Em] Ngày nào cũng [Bm] kéo nhau đi
+[C] Mỗi đứa mấy viên là [G] cân hết làng
+[Am] Sau mỗi trận ảnh [D] chất đầy tay
+
+[G] Một nghìn đồng được một [D] viên mắt to
+[Em] Còn nghìn rưỡi có [Bm] viên mắt mèo
+[C] Thế bán bao nhiêu [G] 100 cây ảnh (2 nghìn)
+[Am] Thôi lấy luôn ảnh [D] với cả bi
+
+Cầm [G] tiền đi mua kẹo [D] vừng với sữa chua
+[Em] Bà ơi cho con nghìn hai kẹo [C] với cả [D] kem
+Kìa [G] mày ơi có hình [D] gì trông oánh ghê
+[Em] Viettel Trendy gì đây? Ô [C] trông thật [D] hay
+
+Buổi [G] chiều gió mát thả [D] diều trên bãi sông
+[Em] Diều ơi bay cao diều ơi sao [C] mãi chẳng [D] lên
+Trò [G] này mỗi đứa nhảy [D] vào bao cám to
+[Em] 123 tất cả đua xem [C] ai về [D] trước",0,NULL,"Hậu Hoàng","Nhạc chế","2020-01-04 09:08:08"
+14,"Chuyện lần đầu tập Gym","Hậu Hoàng","[C] Hôm nay tôi nghe bao lời bình luận chê bai
+[F] Xung quanh ai ai cũng bảo mình gầy như ma
+Bực [Am] nha
+Làm sao đây cho tăng cân dáng [G] đẹp
+Tập gym.
+
+[C] Bao nhiêu lâu nay chưa từng mặc đồ bó sát
+[F] Legging các thứ bra hở rốn chắc cứ mặc
+Thử [Am] xem
+Quần áo thôi cũng đã thấy mệt [G] ghê
+Ok ok
+
+[C] Nhìn ai cũng khỏe cũng ngầu mình như cái cọc buộc trâu
+[F] Hôm qua đã quyết tập gym tăng cân dù ngại thì cũng phải Let's go
+[Am] Người đẩy người kéo lạ ghê ô body chị này trông phát mê
+[G] Đưa lên đưa xuống rồi rụt về à tập gym nhìn chung nó cũng dễ
+
+Và tôi [F] kéo kéo kéo và tôi [Dm] kéo rất đam mê
+Và tôi [Am] chơi đánh đu cho cuộc đời [G] tôi đỡ ngu
+Và tôi [F] lướt lướt lướt và tôi [Dm] đấm bốc rất ghê
+Chạy không [Am] phanh để cân tăng lên thật [G] nhanh
+
+[C] Hello em trai chắc là lần đầu qua đây (Em gái ạ)
+[F] Anh bên PT có thể kèm cho em trai tập [Am] gym (Em gái ạ)
+Người mới tham gia rất dễ chấn [G] thương
+Tập không em?
+
+Sao trông gian gian muốn lừa [C] lọc ta hay sao
+Không quen không thân ra hỏi [F] thăm chắc chắn là
+Sở khanh (Mà PT là cái gì?)
+Lừa [Am] bắt cóc sang Trung Quốc thì [G] sao?
+
+Bài đầu [F] tiên hãy Squat 100 [Dm] cái trước khi Plank
+Ngẩn mặt [Am] lên chống tay vuông góc thẳng [G] lưng siết mông
+Gập bụng [F] thêm 50 lần xong [Dm] hít đất tiếp theo
+Tập tạ [Am] đơn giúp cơ tay phát triển [G] hơn
+
+[F] Đau quá [Dm] đau
+[Am] Tay chân rất [G] đau
+Giờ thân [F] xác như đi [Dm] mượn
+Nằm đệm [Am] êm cũng đỡ đau [G] lưng
+
+Phải ăn [F] uống đúng cách thịt với [Dm] cá với rau xanh
+Ngày chia [Am] 5 bữa cơm sau ăn bổ [G] sung trái cây
+Ngủ đúng [F] giấc mỗi tối đủ 8 [Dm] tiếng cấm thức đêm
+Và 2 [Am] lít nước chắn chắn không được [G] quên
+
+Tập gym [F] có những lúc mình cảm [Dm] thấy muốn buông xuôi
+Mà thành [Am] công sẽ không đến với người [G] chưa quyết tâm
+Phải cố [F] gắng hết sức tập cho [Dm] ta chứ cho ai
+Hành động [Am] ngay chứ chớ có đợi ngày [G] mai.",0,NULL,"Hậu Hoàng","Nhạc chế","2020-01-04 09:08:47"
+15,"Học phận (chế Bạc Phận)",Jack,"[Am] Em đang học gì ?
+[G] Ai đã làm gì ?
+[F] Mà trông em như thiếu [E] oxi
+
+[Am] Em ôn học kỳ
+[G] Nguyên đêm chẳng nghỉ
+[F] Giờ chỉ mong thoát [E] y
+
+Ở trên thầy [Am] giảng nhiệt huyết hết [G] mình vê lờ
+Ở [F] dưới mặt em cứ ... [E] ĐỜ
+3 ca một [Am] ngày suốt sáng , suốt [G] đêm , suốt chiều
+Dập [F] em bẹp như cuốn [E] chiếu
+
+-" Trên lớp tôi không [F] thể dạy kỹ được [G] em
+Vì thương các em [Em] nên tôi áy náy hằng [Am] đêm "
+-" Ấy thế nên tôi [F] định là "
+-" Ấy thế nên ... " - " Cái [G] gì ạ ? "
+-" Chính thức nay tôi [Em] mở lớp phụ đạo , vì [Am] thương các em "
+
+-" Nói thế thôi chưa [F] gì cúi hết là [G] sao
+-" Này là lớp tự [Em] nguyện chứ có ép buộc [Am] đâu "
+-" Nếu có ai thấy [F] mình giỏi
+-" Học chính em thấy [G] đủ rồi "
+-" Miễn lúc thi em [Em] làm được bài là [Am] OK , thế thôi "
+
+- "[F] Sĩ số
+[G] 34
+Người [Em] đăng ký
+Là [Am] 33
+[F] Có mỗi
+Mình [G] anh Ninh
+Chẳng [Em] đăng ký
+À [Am] kinh kinh "
+
+Giờ lặng [F] im nghe tôi đọc đề
+Lớp tập [G] trung ghi nhanh còn về
+X+[Em] Y+Z = 2 cho X lớn hơn [Am] Y , Tìm X các em êiiii
+
+" Cô ơi dạng [F] này ở trên lớp đã dạy đâu "
+" Ơ hay các [G] bạn làm bình thường có gì đâu
+Mọi hôm tôi [Em] dạy không biết nhét gì vào đầu
+Không tập trung [Am] học rồi giờ lí do lí trấu
+
+" Gần [F] đây thấy Ninh lêu lổng
+Và [G] Ninh kiến thức rất hổng
+Dạy [Em] thêm cũng không đi học
+Ôi đớn đau [Am] lòng "
+" Ôi đớn đau lòng
+
+" Tình [F] hình nó rất tình hình
+Còn [G] tôi đã cố hết mình
+Dạ [Em] tôi biết cô có tình
+Cô giúp gia đình
+Cô giúp gia đình "
+
+Lịch học [Am] giờ nó đã kín [G] đặc cái tờ
+Chỉ [F] thốt được câu " Vãi [E] lờ "
+Học trò bị "[Am] Dìm " gần chết bởi " [G] Người lái đò "
+Học [F] sinh bạc phận sóng [E] gió
+
+Sáng Sóc Sơn , trưa [F] Hoàng Mai , tối Hà [G] Đông
+Ngày nào cũng lông [Em] nhông , chai cứng hết bờ [Am] mông
+Trong phút giây em [F] mệt nhoài
+Đôi mắt muốn nhắm [G] tịt lại
+Tiếng súng [Em] vang bên tai , mắt lại mở , lại [Am] phải cố " nhai "
+
+Lớp Lý cô không [F] dạy chi , vẫn phải [G] đi
+Đề cô phát xong [Em] xuôi , cô cất bước biệt [Am] ly
+Học phí cô thu [F] tì tì
+Em vẫn đi cũng [G] là vì
+Cô chính cô ra [Em] đề thi học kỳ
+" Nghỉ [Am] hộ bố đi "
+
+"[F] Ôi cũng đã đến hè
+Giờ [G] con muốn đi đâu nè "
+"Dạ [Em] con muốn đi Bến Tre
+"Hông có đâu [Am] nè
+Hông có đâu nè "
+
+"[F] Chơi lắm 3 tháng hè
+Trò [G] ngoan phải đi học hè
+Tiền [Em] cũng đã đóng Âu zè "
+Con " Ôi mắt hơi [Am] nhòe
+Ôi mắt hơi nhòe "
+
+Trai nếu không [F#] stu đì cầm súng và [Ab] đi
+Còn nữ ếu [Fm] study chỉ có nước làm [Bbm] đ*
+Học thêm cứ đi, không [F#] ngày nghỉ
+Nhưng chắc chi đã [Ab] hiểu gì
+Thời gian, sức khoẻ, [Fm] money cứ ngày ngày chạy [Bbm] đi cứ đi
+
+[F#] 11 sắp lên [Ab] 12
+Vẫn đang mông [Fm] lung chưa biết học gì [Bbm] đây
+Thì [F#] PEN vẫn luôn ở [Ab] đây
+Lộ trình đủ [Fm] đầy, 24 điểm được [Bbm] ngay
+
+Này [F#] ai sắp lên [Ab] 12
+Thấy thi đại [Fm] học sao ôn tập thật [Bbm] khoai
+Đừng [F#] lo ở trên Học [Ab] mãi
+Có [Fm] PEN đây rồi, everything’s [Bbm] alright",0,NULL,"Jack & KICM","Nhạc chế","2020-01-04 09:09:29"
