@@ -20,6 +20,7 @@ public class AppController {
 	@RequestMapping("/")
 	public String viewHomePage(Model model) {
 		List<Song> listSongs = service.listAll();
+		List<Song> listBestSongs = service.getTop10();
 		Collections.sort(listSongs);
 		List<Song> listTruncate = new LinkedList<Song>();
 		Iterator<Song> it = listSongs.iterator();
@@ -34,6 +35,7 @@ public class AppController {
 			listTruncate.add(modelSong);
 		}
 		model.addAttribute("listSongs", listTruncate);
+		model.addAttribute("listBestSongs", listBestSongs);
 		return "index";
 	}
 

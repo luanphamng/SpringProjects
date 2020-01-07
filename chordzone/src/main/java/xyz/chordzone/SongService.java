@@ -42,4 +42,6 @@ public class SongService {
 	public Long getTotalRows(){
 		return repo.getTotalRows();
 	}
+
+	public List<Song> getTop10(){return repo.getTop10();}
 }
