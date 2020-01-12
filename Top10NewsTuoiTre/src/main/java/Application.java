@@ -28,14 +28,29 @@ public class Application {
                 //2. Fetch the HTML code
                 Document document = Jsoup.connect(URL).get();
                 //3. Parse the HTML to extract links to other URLs
-                Elements linksOnPage = document.select("a[href]");
+                Elements linksOnPage = document.select("div.box-mostview");
                 System.out.println("============= Link On Page =============");
                 System.out.println(linksOnPage);
                 System.out.println("============= End on Page =============");
+                Elements linksSeperates = linksOnPage.select("li");
+                System.out.println("============= Link seperate =============");
+                for(Element e : linksSeperates){
+                    System.out.println("Seperate: " + e);
+                }
+//                System.out.println(linksSeperates);
+                System.out.println("============= End on link seperate =============");
                 //5. For each extracted URL... go back to Step 4.
-                for (Element page : linksOnPage) {
+//                for (Element page : linksOnPage) {
+////                    getPageLinks(page.attr("abs:href"));
+////                }
+                for (Element page : linksSeperates) {
                     getPageLinks(page.attr("abs:href"));
                 }
+//                for (Element headline : linksSeperates) {
+//                    String t = headline.attr("src");
+//                    System.out.print("Title: " + t);
+////                    System.out.println("   Url: " + headline.attr("href"));
+//                }
             } catch (IOException e) {
                 System.err.println("For '" + URL + "': " + e.getMessage());
             }
@@ -44,7 +59,7 @@ public class Application {
 
     public static void main(String[] args) {
         //1. Pick a URL from the frontier
-        new Application().getPageLinks("https://www.techmaker.vn");
+        new Application().getPageLinks("http://tuoitre.vn/");
     }
 
 }
