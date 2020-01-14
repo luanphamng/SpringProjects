@@ -1,4 +1,11 @@
+import java.util.ArrayList;
+
 public class Article {
+
+    public Article(String url, String img){
+        this.url = url;
+        this.img = img;
+    }
     public String getUrl() {
         return url;
     }
