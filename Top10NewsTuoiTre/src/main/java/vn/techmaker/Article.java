@@ -1,10 +1,17 @@
+package vn.techmaker;
+
 import java.util.ArrayList;
 
 public class Article {
 
-    public Article(String url, String img){
+    private String url;
+    private String title;
+    private String img;
+
+    public Article(String url, String img, String title){
         this.url = url;
         this.img = img;
+        this.title = title;
     }
     public String getUrl() {
         return url;
@@ -22,7 +29,11 @@ public class Article {
         this.img = img;
     }
 
-    private String url;
-    private String img;
+    public String getTitle() {
+        return title;
+    }
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
 }

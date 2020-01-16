@@ -1,3 +1,4 @@
+package vn.techmaker;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -8,12 +9,12 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.*;
 
-public class Application {
+public class CrawlerEngine {
 
     private HashSet<String> links;
-    private List<Article> topNewArticles;
+    protected List<Article> topNewArticles;
 
-    public Application() {
+    public CrawlerEngine() {
         links = new HashSet<String>();
         topNewArticles = new ArrayList<Article>();
     }
@@ -34,18 +35,23 @@ public class Application {
                 Elements linksOnPage = document.select("div.box-mostview");
                 System.out.println("============= Link On Page =============");
                 System.out.println(linksOnPage);
-                System.out.println("============= End on Page =============");
-                Elements linksArticle = linksOnPage.select("li");
+                Elements linksUrl = linksOnPage.select("li");
                 Elements linksImage = linksOnPage.select("img");
-
+                Elements linksTitle = linksOnPage.select("title");
+                System.out.println("============= Titles On Page =============");
+                System.out.println(linksTitle);
                 List<String> sStr = new ArrayList<String>();
-                for (Element page : linksArticle) {
+                List<String> sStrTitle = new ArrayList<String>();
+                for (Element page : linksUrl) {
                     if (page.childNodes().size() > 1) {
                         for (Node node : page.childNodes()) {
-                            String nodeAttr = node.attr("href");
-                            if (nodeAttr != "") {
-                                System.out.println("https://tuoitre.vn" + nodeAttr);
-                                sStr.add("https://tuoitre.vn" + nodeAttr);
+                            String nodeAttrHref = node.attr("href");
+                            String nodeAttrTitle = node.attr("title");
+                            if (nodeAttrHref != "") {
+                                System.out.println("https://tuoitre.vn" + nodeAttrHref);
+                                System.out.println("Title: " + nodeAttrTitle);
+                                sStr.add("https://tuoitre.vn" + nodeAttrHref);
+                                sStrTitle.add(nodeAttrTitle);
                                 break;
                             }
                         }
@@ -59,8 +65,9 @@ public class Application {
                         System.out.println(nodeAttr);
                     }
                 }
+
                 for (int i = 0; i < sStr.size(); i++){
-                    topNewArticles.add(new Article(sStr.get(i), sStr2.get(i)));
+                    topNewArticles.add(new Article(sStr.get(i), sStr2.get(i), sStrTitle.get(i)));
                 }
                 System.out.println(topNewArticles);
             } catch (IOException e) {
@@ -68,10 +75,4 @@ public class Application {
             }
         }
     }
-
-    public static void main(String[] args) {
-        //1. Pick a URL from the frontier
-        new Application().getPageLinks("http://tuoitre.vn/");
-    }
-
 }
