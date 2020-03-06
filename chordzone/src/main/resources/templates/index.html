@@ -63,7 +63,7 @@
     }
 </style>
 <!--nav-->
-<div th:replace="/includes/globalNav :: globalNav"></div>
+<div th:replace="includes/globalNav :: globalNav" th:remove="tag"></div>
 <div class="container pt-3">
     <div class="row">
         <div class="col-lg-8">
@@ -77,7 +77,7 @@
                         (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
                 </div>
-                <div class="ct-heading"><a href="/new_song"> ĐĂNG BÀI HÁT MỚI </a> <a
+                <div class="ct-heading"><a href="/new_song"> ĐĂNG BÀI HÁT MỚI </a> <a th:if="${IsViewMoreEnable}"
                         href="/viewmore/2" class="float-right"><em>Xem thêm <i
                         class="fas fa-arrow-right"></i></em> </a></div>
                 <div class="row  p-right">
@@ -107,129 +107,9 @@
                             class="float-right text-muted small" th:text=${song.postdate}>post_time</span></a>
                         <div class="clearfix"></div>
                     </div>
-                    <div class="mx-auto pt-2">
+                    <div class="mx-auto pt-2" th:if="${IsViewMoreEnable}">
                         <a href="/viewmore/2" class="btn btn-outline-primary btn-sm">Xem
                             thêm</a>
-                    </div>
-                </div>
-            </div>
-            <div class="ct-box">
-                <div class="ct-heading"><a href="list_related">TƯ LIỆU</a></div>
-                <div class="row p-right">
-                    <div class="col-lg-6 col-sm-12" style="padding-bottom: 18px">
-                        <a href="#"
-                           title="Trịnh Công Sơn và thành phố Quy Nhơn">
-                            <div><img
-                                    src="https://hopamviet.vn/assets/images/editor/thumb/trinh-cong-son_pvah_thumb.jpg"
-                                    width="120" height="80" class="float-left mr-3"
-                                    alt="Trịnh Công Sơn và thành phố Quy Nhơn"></div>
-                            <div>Trịnh Công Sơn và thành phố Quy Nhơn</div>
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-sm-12" style="padding-bottom: 18px">
-                        <a href="#"
-                           title="Từ Hoa sứ nhà nàng đến nhạc Gò Công">
-                            <div><img src="https://hopamviet.vn/assets/images/editor/thumb/hoang-phuong_thumb.jpg"
-                                      width="120" height="80" class="float-left mr-3"
-                                      alt="Từ Hoa sứ nhà nàng đến nhạc Gò Công"></div>
-                            <div>Từ Hoa sứ nhà nàng đến nhạc Gò Công</div>
-                        </a>
-                    </div>
-                </div>
-                <div class="row p-right">
-                    <div class="col-lg-6 col-sm-12" style="padding-bottom: 18px">
-                        <a href="#"
-                           title="Vợ cố nhạc sĩ Trương Quốc Khánh: Hầu hết hát sai lời Tự nguyện">
-                            <div><img src="https://hopamviet.vn/assets/images/editor/thumb/tu-nguyen_thumb.jpg"
-                                      width="120" height="80" class="float-left mr-3"
-                                      alt="Vợ cố nhạc sĩ Trương Quốc Khánh: Hầu hết hát sai lời Tự nguyện"></div>
-                            <div>Vợ cố nhạc sĩ Trương Quốc Khánh: Hầu hết hát sai lời Tự nguyện</div>
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-sm-12" style="padding-bottom: 18px">
-                        <a href="#"
-                           title="Ca khúc 'Hẹn hò' của nhạc sĩ Phạm Duy – Câu chuyện tình buồn giữa một mùa Ngâu">
-                            <div><img src="https://hopamviet.vn/assets/images/editor/thumb/hen-ho_thumb.jpg" width="120"
-                                      height="80" class="float-left mr-3"
-                                      alt="Ca khúc 'Hẹn hò' của nhạc sĩ Phạm Duy – Câu chuyện tình buồn giữa một mùa Ngâu">
-                            </div>
-                            <div>Ca khúc 'Hẹn hò' của nhạc sĩ Phạm Duy – Câu chuyện tình buồn giữa một mùa Ngâu</div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="ct-box">
-                <div class="ct-heading"><a href="#"> BÌNH LUẬN MỚI</a></div>
-                <div class="row">
-                    <div class="col-md-6 col-xs-12">
-                        <div style="padding: 5px;">
-                            <a href="#">Đà Lạt lập đông</a>
-                        </div>
-                        <small><em><strong>kynguyen65: </strong>@ngucamband: cám ơn bạn, từ nay các thành viên có thêm
-                            một lựa chon.</em> <br/><span class="text-muted"> <i class="fa fa-clock-o"></i> 1 giờ trước</span></small>
-                    </div>
-                    <div class="col-md-6 col-xs-12">
-                        <div style="padding: 5px;">
-                            <a href="#">Bông hồng cài
-                                áo</a>
-                        </div>
-                        <small><em><strong>Vũ Khắc Điệp: </strong>Cho thêm giọng ca của ca sĩ Tuấn Anh vào luôn đi
-                            ad.</em> <br/><span class="text-muted"> <i
-                                class="fa fa-clock-o"></i> 5 giờ trước</span></small>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-xs-12">
-                        <div style="padding: 5px;">
-                            <a href="#">Đà Lạt lập đông</a>
-                        </div>
-                        <small><em><strong>ngucamband: </strong>Hi Ad! Mình nghe phiên bản của Quang Dũng hát, có đề
-                            nghị chỉnh lại một vài hợp âm như sau:…</em> <br/><span class="text-muted"> <i
-                                class="fa fa-clock-o"></i> 13 giờ trước</span></small>
-                    </div>
-                    <div class="col-md-6 col-xs-12">
-                        <div style="padding: 5px;">
-                            <a href="#">Nhớ về một mùa
-                                xuân</a>
-                        </div>
-                        <small><em><strong>kynguyen65: </strong>@khoa: hiện tại sheet bài này chưa có nhé bạn</em> <br/><span
-                                class="text-muted"> <i class="fa fa-clock-o"></i> 16 giờ trước</span></small>
-                    </div>
-                </div>
-                <div class="row">
-
-                    <div class="col-md-6 col-xs-12">
-                        <div style="padding: 5px;">
-                            <a href="#">Hết thương cạn
-                                nhớ</a>
-                        </div>
-                        <small><em><strong>kynguyen65: </strong>@sakuzi: Huy vạc giọng Bbm nhé</em> <br/><span
-                                class="text-muted"> <i class="fa fa-clock-o"></i> 18 giờ trước</span></small>
-                    </div>
-                    <div class="col-md-6 col-xs-12">
-                        <div style="padding: 5px;">
-                            <a href="#">Cõi nhớ</a>
-                        </div>
-                        <small><em><strong>kynguyen65: </strong>Phương Anh - tone Bm nhé @Khá
-                            Còn về hợp âm bài hát thì cơ bản cũng như trên</em> <br/><span class="text-muted"> <i
-                                class="fa fa-clock-o"></i> 18 giờ trước</span></small>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-xs-12">
-                        <div style="padding: 5px;">
-                            <a href="#">Cõi nhớ</a>
-                        </div>
-                        <small><em><strong>Khá: </strong>Ad nào có hợp âm ca sỹ phương anh không</em> <br/><span
-                                class="text-muted"> <i class="fa fa-clock-o"></i> 18 giờ trước</span></small>
-                    </div>
-                    <div class="col-md-6 col-xs-12">
-                        <div style="padding: 5px;">
-                            <a href="#">Hết thương cạn
-                                nhớ</a>
-                        </div>
-                        <small><em><strong>sakuzi: </strong>admin add thêm giọng huy vạc giúp mình nhé…</em> <br/><span
-                                class="text-muted"> <i class="fa fa-clock-o"></i> 19 giờ trước</span></small>
                     </div>
                 </div>
             </div>
@@ -291,7 +171,7 @@
     ﻿
 </div>
 
-<div th:replace="/includes/footer :: footer"></div>
+<div th:replace="includes/footer :: footer" th:remove="tag"></div>
 <script src="/assets/js/comment.js"></script>
 </body>
 </html>

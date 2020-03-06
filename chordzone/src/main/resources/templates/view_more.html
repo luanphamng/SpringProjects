@@ -60,7 +60,7 @@
         display: block;
     }
 </style>
-<div th:replace="/includes/globalNav :: globalNav"></div>
+<div th:replace="includes/globalNav :: globalNav" th:remove="tag"></div>
 <div class="container pt-3">
     <div class="row">
         <div class="col-lg-8">
@@ -167,7 +167,7 @@
     </div>
     ﻿
 </div>
-<div th:replace="/includes/footer :: footer"></div>
+<div th:replace="includes/footer :: footer" th:remove="tag"></div>
 <script src="https://hopamviet.vn/assets/js/comment.js"></script>
 </body>
 </html>

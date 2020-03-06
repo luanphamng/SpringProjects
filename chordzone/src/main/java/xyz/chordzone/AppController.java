@@ -34,8 +34,12 @@ public class AppController {
 			}
 			listTruncate.add(modelSong);
 		}
-		model.addAttribute("listSongs", listTruncate);
+		// See more button
+		Long total_chords = service.getTotalRows();
+		Boolean IsViewMoreEnable = (total_chords / 10 + 1) >= 2 ? true : false;
+		model.addAttribute("IsViewMoreEnable", IsViewMoreEnable);
 		model.addAttribute("listBestSongs", listBestSongs);
+		model.addAttribute("listSongs", listTruncate);
 		return "index";
 	}
 

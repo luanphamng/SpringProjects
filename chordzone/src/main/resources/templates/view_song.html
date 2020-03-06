@@ -51,7 +51,7 @@ Tình yêu đã [D] mang ta đi nơi nào
 	}
 </style>
 <!-- Global navigation;-->
-<div th:replace="includes/globalNav"></div>
+<div th:replace="includes/globalNav" th:remove="tag"></div>
 
 <div class="container pt-3">
 <div class="row">
@@ -295,7 +295,7 @@ Bạn cần phải <a href="https://hopamviet.vn/auth/login.html">đăng nhập<
 </script>
 ﻿
 </div>
-<div th:replace="/includes/footer :: footer"></div>
+<div th:replace="includes/footer :: footer" th:remove="tag"></div>
 <script src="https://hopamviet.vn/assets/js/comment.js"></script>
 </body>
 </html>

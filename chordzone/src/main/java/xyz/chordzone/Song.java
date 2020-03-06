@@ -5,6 +5,7 @@ import java.util.Comparator;
 import java.util.Date;
 
 @Entity
+@Table (name = "song")
 public class Song implements Comparable<Song>{
 	private Long id;
 	private String title;
@@ -54,6 +55,7 @@ public class Song implements Comparable<Song>{
 		this.artist = artist;
 	}
 
+	@Column(length = 5000)
 	public String getLyric() {
 		return lyric;
 	}
